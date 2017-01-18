@@ -3,7 +3,8 @@
 	 $columnsT_utilisateur = array();
 	 $columnsT_competence = array();
 	 $columnsT_experience = array(); 
-	 
+	 $dataUtilisateurs = array();
+
 	 foreach ($columns as $key => $value) {
 
 	 	$columnsTitle [$columns[0][0]['name']] = $columns[0][0] ;
@@ -29,12 +30,14 @@
 	 $columnsT_experience = array_slice($columnsT_competence['t_competence'],3,8);
 	 $columnsT_competence = array_slice($columnsT_competence['t_competence'],0,2);
 	  $columnsT_utilisateur = array_slice($columnsT_utilisateur['t_utilisateur'], 0, 17);
+
 ?>
 
 <?php $this->layout('layout.admin',array('title' => 'Home',
 										'LayoutLateralBar' => 'Mes infos'	)); ?>
 
 <?php $this->start('main_content');?>
+
 
 <?php $this->stop('main_content');?>
 
@@ -46,9 +49,25 @@
 		foreach ($columnsT_utilisateur as $key => $value) {
 
 			if($key%2){
-
+					
 			echo'<th class="text-center">'.$value['name'].'</th>';
+
 			}
+		}
+
+	  
+	  		foreach ($datas[0] as $key => $value) {
+			
+			echo'<tr>';
+				echo'<td>'.$value['nom'].'</td>';
+				echo'<td>'.$value['prenom'].'</td>';
+				echo'<td>'.$value['sexe'].'</td>';
+				echo'<td>'.$value['code_postal'].'</td>';
+				echo'<td>'.$value['pays'].'</td>';
+				echo'<td>'.$value['mdp'].'</td>';
+				echo'<td>'.$value['avatar'].'</td>';
+				echo'<td>'.$value['notes'].'</td>';
+			echo'</tr>';
 		}
 	?>
 	<tr>
