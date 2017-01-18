@@ -11,5 +11,8 @@ try{
 
 //déclaration de la variable du contenu du site 
 $contenu = '';
+$data = array();
 //délcaration d'une constante pour le chemin racite de notre site
 define('WEBROOT','/site_cv/');
+
+require_once"functions.inc.php";

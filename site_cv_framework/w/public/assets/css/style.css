@@ -49,7 +49,7 @@ font-size: 16px;
 
 #main-menu ul li a.active{
 	
-	border:3px solid white;
+	border:2px solid white;
 	border-radius: 45px;
 	opacity: 1;
 }
@@ -193,9 +193,10 @@ h2{
 	#content{
 
 		background-color: white;
-		height: 100vh;
+		height:auto;
 		width: 65%;
 		margin: 75px auto;
+		padding: 15px;
 		left:75px;
 		float: left;
 	}
@@ -204,7 +205,8 @@ h2{
 		
 	
 		padding:5px 10px 0;
-
+		width: auto;
+	
 		
 	}
 
@@ -241,7 +243,7 @@ h2{
 	.barre-lateral{
 
 		float: left;
-		width:20%;
+		width:auto;
 		background:white;
 		margin:75px 0 0 45px;
 		position: relative;

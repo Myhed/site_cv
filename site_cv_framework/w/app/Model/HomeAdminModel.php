@@ -4,6 +4,7 @@ namespace Model;
 
 use \W\Model\Model;
 
+
 class HomeAdminModel extends Model{
 
 		public $data = [];
@@ -19,4 +20,16 @@ class HomeAdminModel extends Model{
 					array_push($this->data,$columns);
 		}
 	}
+
+
+		public function ifUserExist($id_utilisateurs){
+
+
+			$query = $this->dbh->query("SELECT $id_utilisateurs FROM $this->table WHERE $this->primaryKey = $id_utilisateurs ");
+
+			$ifUserExist = $query->rowCount();
+
+			return $ifUserExist;
+
+		}
 }

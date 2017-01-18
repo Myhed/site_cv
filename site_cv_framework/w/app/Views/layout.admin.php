@@ -57,6 +57,18 @@
 			
 				
 		</aside>
+	<?php else:?>
+			<aside class="barre-lateral">
+				<div class=" titre-barre-lateral fa-id-card-o ">
+					<h4><?=$LayoutLateralBar;?></h4>
+				</div>
+				<div class="content-barre-lateral">
+					<?= $this->section('sidebar'); ?>
+				</div>
+				<div class="clearfix"></div>
+			
+				
+		</aside>
 	<?php endif;?>
 	</body>
 </html>
