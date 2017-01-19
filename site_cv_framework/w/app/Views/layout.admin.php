@@ -22,9 +22,9 @@
 		
 		<ul>
 			<li><a href="<?=$this->url('Admin_homeAdmin'); ?>" class="<?= ($w_current_route == 'Admin_homeAdmin') ? 'active' : ''; ?>">Accueil</a></li>
-			<li><a href="<?=$this->url('Admin_messages'); ?>" class="<?= ($w_current_route == 'Admin_messages') ? 'active' : ''; ?>">Vos messages</a></li>
-			<li><a href="<?=$this->url('Admin_competence'); ?>"" class="<?= ($w_current_route == 'Admin_competence') ? 'active' : ''; ?>">Vos compétence</a></li>
-			<li><a href="<?=$this->url('Admin_portfolio');?>" class="<?= ($w_current_route == 'Admin_portfolio') ? 'active' : ''; ?>">Gérez votre portfolio</a></li>
+			<li><a href="<?=$this->url('Admin_messages'); ?>" class="<?= ($w_current_route == 'Admin_messages') ? 'active' : ''; ?>">Mes messages</a></li>
+			<li><a href="<?=$this->url('Admin_competence'); ?>"" class="<?= ($w_current_route == 'Admin_competence') ? 'active' : ''; ?>">Mes compétence</a></li>
+			<li><a href="<?=$this->url('Admin_experience');?>" class="<?= ($w_current_route == 'Admin_experience') ? 'active' : ''; ?>"> Mes Experience</a></li>
 		</ul>
 		
 	</div>
@@ -40,35 +40,54 @@
 		</div>
 	</div>
 </div>
-	<div class="container-body">
-			<div id="content">
+	<div class="container">
+			
 				<?= $this->section('main_content') ?>
-			</div>
-		</div>
-		<?php if($w_current_route == 'Admin_homeAdmin'):?>
-		<aside class="barre-lateral">
+
+				<?php if($w_current_route != 'Admin_modifier' && $w_current_route != 'Admin_ajouter'):?>
+				<aside class="barre-lateral">
 				<div class=" titre-barre-lateral fa-id-card-o ">
 					<h4><?=$LayoutLateralBar;?></h4>
 				</div>
-				<div class="content-barre-lateral">
+				<div class="content-barre-lateral content-barre-lateral-2">
 					<?= $this->section('sidebar'); ?>
 				</div>
 				<div class="clearfix"></div>
 			
 				
 		</aside>
-	<?php else:?>
-			<aside class="barre-lateral">
-				<div class=" titre-barre-lateral fa-id-card-o ">
-					<h4><?=$LayoutLateralBar;?></h4>
-				</div>
-				<div class="content-barre-lateral">
-					<?= $this->section('sidebar'); ?>
-				</div>
-				<div class="clearfix"></div>
-			
-				
-		</aside>
+
 	<?php endif;?>
+
+		
+		</div>
+		<div class="container">
+		<?php if($w_current_route == 'Admin_homeAdmin'): ?>
+			<aside class="barre-lateral">
+				<div class=" titre-barre-lateral titre-barre-lateral-2 fa-id-card-o ">
+					<h4><?=$LayoutLateralBar;?></h4>
+				</div>
+				<div class="content-barre-lateral">
+					<?= $this->section('sidebar-2'); ?>
+				</div>
+				<div class="clearfix"></div>
+			
+				
+		</aside>
+		<aside class="barre-lateral">
+				<div class="titre-barre-lateral titre-barre-lateral-3 fa-id-card-o ">
+					<h4><?=$LayoutLateralBar;?></h4>
+				</div>
+				<div class=" content-barre-lateral content-barre-lateral-3">
+					<?= $this->section('sidebar-3'); ?>
+				</div>
+				<div class="clearfix"></div>
+			
+				
+		</aside>
+			<?php endif;?>
+			
+		</div>
+		
 	</body>
 </html>

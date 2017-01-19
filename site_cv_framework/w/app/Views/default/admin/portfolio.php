@@ -1,1 +1,0 @@
-<?php $this->layout('layout.admin',['title' => 'Portfolio']);?>

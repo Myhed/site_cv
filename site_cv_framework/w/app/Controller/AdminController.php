@@ -64,9 +64,15 @@ class AdminController extends Controller{
 		$this->show('default/admin/Competence',['datas_competence' => $datas_competence,'columns' => $columns]);
 	}
 
-	public function portfolio(){
+	public function experience(){
 
-		$this->show('default/admin/portfolio');
+		$this->homeModel->setTable('t_experience');
+
+		$experiences = $this->homeModel->findAll();
+		$this->homeModel->getColumnName();
+		$columns = $this->homeModel->data;
+
+		$this->show('default/admin/experience',array('experiences' => $experiences,'columns' => $columns));
 	}
 
 	public function supprimer($chemin,$table,$setPrimaryKey,$id){

@@ -20,6 +20,7 @@
     <!-- Custom Fonts -->
     <link href="<?=$this->assetUrl('font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <script src="<?= $this->assetUrl('js/mains.js'); ?>"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +48,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right topnav">
                     <li>
                         <a href="#about">About</a>
                     </li>
@@ -73,8 +74,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Landing Page</h1>
-                        <h3>A Template by Start Bootstrap</h3>
+                        <h1>Ben-Rhouma Myhed</h1>
+                        <h3>Developper/Integrateur Web</h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
@@ -100,44 +101,34 @@
     <!-- Page Content -->
 
     <a  name="services"></a>
-    <div class="content-section-a">
+        <div class="content-section-a">
 
-            <?=$this->section('content-section-a'); ?>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <div class="content-section-b">
-
-            <?=$this->section('content-section-b'); ?>
-       
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
-
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/phones.png" alt="">
-                </div>
-            </div>
+                <?=$this->section('content-section-a'); ?>
+            <!-- /.container -->
 
         </div>
-        <!-- /.container -->
+        <!-- /.content-section-a -->
+        <div class="content-section-b">
 
-    </div>
-    <!-- /.content-section-a -->
+                <?=$this->section('content-section-b'); ?>
+           
+            <!-- /.container -->
+
+        </div>
+        <!-- /.content-section-b -->
+        <div class="content-section-a">
+
+                <?= $this->section('content-section-c'); ?>
+        <!-- /.content-section-a -->
+        </div>
+
+        <div class="content-section-b">
+                
+                <?=$this->section('content-section-d'); ?>
+
+        </div>
+        <!-- /.content-section-b -->
+   
 
     <a  name="contact"></a>
     <div class="banner">

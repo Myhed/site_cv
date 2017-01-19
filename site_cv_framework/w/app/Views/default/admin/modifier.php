@@ -5,7 +5,7 @@
 <div class="well col-md-8 col-md-offset-2">
 	<h1>Modification des informations</h1>
 	<form action="" method="POST" enctype="multipart/data">
-	<?php if($table != 't_competence'):?>
+	<?php if($table == 't_utilisateur'):?>
 		<div class="form-group">
 			<label for="">Nom</label>
 			<input type="text" name="nom" class="form-control" value="<?php echo $datas['nom'] ?>">
@@ -68,7 +68,38 @@
 			<label for="">Statut</label>
 			<input type="text" name="statut" class="form-control" value="<?= $datas['statut']?>">
 		</div>
-		<?php else:?>
+		
+		<?php elseif($table == 't_experience'):?>
+				
+				<div class="form-group">
+				
+				<label for="">Titre de l'expérience</label>
+				<input type="text" name="titre_experience" class="form-control" value="<?=$datas['titre_experience'];	 ?>">
+				
+
+			</div>
+
+			
+
+
+			<div class="form-group">
+
+				<label for="">Sous titre de votre experience</label>
+				<input type="text" name="sous_titre_experience" class="form-control" value="<?=$datas['sous_titre_experience']; ?>">
+			</div>
+
+			<div class="form-group">
+				<label for="">dates</label>
+				<input type="text" name="sous_titre_experience" class="form-control" value="<?=$datas['dates']; ?>">
+			</div>
+
+				<div class="form-group">
+				<label for="">description</label>
+				<textarea name="description" id="" cols="30" class="form-control" rows="10"><?=$datas['description']; ?></textarea>
+			</div>
+
+
+				<?php elseif($table == 't_competence'):?>
 			
 			<div class="form-group">
 				
@@ -84,7 +115,6 @@
 				<label for="">Vote competence</label>
 				<input type="text" name="competence" class="form-control" value="<?=$datas['competence']; ?>">
 			</div>
-
 	<?php endif;?>
 
 		<button class="btn btn-primary">Modifier</button>
