@@ -26,7 +26,37 @@ $t_competence = array_slice($columns[2],17,+3);
 				<?php endforeach;?>
 						
 				<?php foreach($datas[0] as $key => $data):?>
-						
+
+					<?php 
+
+						echo'<tr>';
+									echo'<td>'.$data['id_utilisateurs'].'</td>';
+									echo'<td>'.$data['nom'].'</td>';
+									echo'<td>'.$data['prenom'].'</td>';
+
+									echo'<td>'.$data['email'].'</td>';
+									echo'<td>'.$data['age'].'</td>';
+									echo'<td>'.$data['sexe'].'</td>';
+
+									echo'<td>'.$data['adresse'].'</td>';
+									echo'<td>'.$data['code_postal'].'</td>';
+									echo'<td>'.$data['ville'].'</td>';
+
+									echo'<td>'.$data['pays'].'</td>';
+									echo'<td>'.$data['etat_civil'].'</td>';
+									echo'<td>'.$data['mdp'].'</td>';
+
+									echo'<td>'.$data['tel'].'</td>';
+									echo'<td>'.$data['avatar'].'</td>';
+									echo'<td>'.$data['pseudo'].'</td>';
+
+									echo'<td>'.$data['notes'].'</td>';
+									echo'<td>'.$data['statut'].'</td>';
+
+
+								echo'</tr>';
+					?>
+							
 				<?php endforeach;?>
 		</table>
 	</div>
@@ -41,7 +71,22 @@ $t_competence = array_slice($columns[2],17,+3);
 					
 					<?php echo'<th class="text-center">'.$column['name'].'</th>'; ?>
 
-					
+
+				<?php endforeach;?>
+
+					<?php foreach($datas[2] as $experience): ?>
+							
+							<?php 
+								echo'<tr>';
+									echo'<td>'.$experience['id_experience'].'</td>';
+									echo'<td>'.$experience['titre_experience'].'</td>';
+									echo'<td>'.$competence['sous_titre_experience'].'</td>';
+									echo'<td>'.$experience['dates'].'</td>';
+									echo'<td>'.$experience['description'].'</td>';
+									echo'<td>'.$experience['id_competence'].'</td>';
+								echo'</tr>';
+							?>
+
 				<?php endforeach;?>
 
 			
@@ -61,11 +106,22 @@ $t_competence = array_slice($columns[2],17,+3);
 					<?php foreach($t_competence as $column):?>
 					
 					<?php echo'<th class="text-center">'.$column['name'].'</th>'; ?>
-
+						
 					
 				<?php endforeach;?>
-
 				
+				<?php foreach($datas[1] as $competence): ?>
+							
+							<?php 
+								echo'<tr>';
+									echo'<td>'.$competence['id_competence'].'</td>';
+									echo'<td>'.$competence['competence_titre'].'</td>';
+									echo'<td>'.$competence['competence'].'</td>';
+								echo'</tr>';
+							?>
+
+				<?php endforeach;?>
+
 		
 				</table>
 	<?php $this->stop('sidebar-3');?>
