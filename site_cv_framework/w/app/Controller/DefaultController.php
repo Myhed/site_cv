@@ -35,7 +35,13 @@ class DefaultController extends Controller
 		$this->homeModel->setTable('t_experience');
 		$experiences = $this->homeModel->findAll();
 
-		$this->show('default/home', array('experiences' => $experiences));
+		$this->homeModel->setTable('t_utilisateur');
+		$utilisateurs = $this->homeModel->findAll();
+
+		$this->homeModel->setTable('t_competence');
+		$competence = $this->homeModel->findAll();
+
+		$this->show('default/home', array('experiences' => $experiences,'users' => $utilisateurs,'competence' => $competence));
 	}
 
 	public function Auth(){

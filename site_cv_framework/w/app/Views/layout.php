@@ -20,6 +20,7 @@
     <!-- Custom Fonts -->
     <link href="<?=$this->assetUrl('font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<?=$this->assetUrl('css/style-front.css');?>">
     <script src="<?= $this->assetUrl('js/mains.js'); ?>"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -150,10 +151,10 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="<?=$this->assetUrl("js/jquery.js"); ?>"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="<?=$this->assetUrl("js/bootstrap.min.js");?>"></script>
 
 </body>
 

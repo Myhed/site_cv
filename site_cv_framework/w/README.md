@@ -4,7 +4,7 @@ W est un framework minimaliste. Il suit les structures et les grand thèmes des 
 
 ---
 
-####Pour télécharger le framework et en consulter la documentation :
+#### Pour télécharger le framework et en consulter la documentation :
 
 1. Dans un terminal : 
 
@@ -16,6 +16,12 @@ W est un framework minimaliste. Il suit les structures et les grand thèmes des 
 2. Naviguez vers http://localhost/nom_de_mon_projet/docs/tuto/
 
 
-####Auteurs :
+#### Auteurs :
 * Guillaume Sylvestre : [@gsylvestre](https://github.com/gsylvestre) (auteur original)
 * Axel Wargnier : [@axessweb](https://github.com/axessweb)
+
+##### colors :
+
+    dark : #0b0c0b
+    green : #7cffa6
+    blue : #bcfff2

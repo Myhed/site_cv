@@ -90,7 +90,7 @@
 
 			<div class="form-group">
 				<label for="">dates</label>
-				<input type="text" name="sous_titre_experience" class="form-control" value="<?=$datas['dates']; ?>">
+				<input type="text" name="dates" class="form-control" value="<?=$datas['dates']; ?>">
 			</div>
 
 				<div class="form-group">

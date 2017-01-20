@@ -108,7 +108,7 @@ class AdminController extends Controller{
 
 		if($_POST){
 
-			$_POST['mdp'] = $this->Auth->hashPassword($_POST['mdp']);
+
 			$this->homeModel->update($_POST,$id_utilisateurs);
 			$this->redirectToRoute($chemin);
 

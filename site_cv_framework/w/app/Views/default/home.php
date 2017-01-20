@@ -5,20 +5,39 @@
 
 	<div class="container">
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="<?=$this->assetUrl('img/ipad.png'); ?>" alt="">
-                </div>
-            </div>
-                
+           <!--      <div class="col-lg-5 col-sm-6">
+               <hr class="section-heading-spacer">
+               <div class="clearfix"></div>
+               <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
+               <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
+           </div>
+           <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+               <img class="img-responsive" src="<?=$this->assetUrl('img/ipad.png'); ?>" alt="">
+           </div>
+                       </div> -->
+                 <?php foreach ($experiences as $key => $value): ?>
+                 <?=$value['titre_experience'].'<br>'
+                 .$value['sous_titre_experience'].'<br>'
+                 .$value['dates'].'<br>'
+                 .$value['description']; ?>
+             <?php endforeach; ?>
         </div>
 
 <?php $this->stop('content-section-a'); ?>
+
+
+<?php $this->start('content-section-b');?>
+    <div class="container">
+        <div class="row">
+             <?php foreach ($competence as $key => $value): ?>
+                 <?=
+                 $value['competence_titre'].'<br>'
+                 .$value['competence'].'<br>';
+                  ?>
+             <?php endforeach; ?>
+        </div>
+    </div>
+<?php $this->stop('content-section-b');?>
 
 
         
