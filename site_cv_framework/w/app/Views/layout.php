@@ -50,10 +50,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right topnav">
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#about">Apropos</a>
                     </li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="<?= $this->url('default_Auth'); ?>">Connexion</a>
                     </li>
                     <li>
                         <a href="#contact">Contact</a>
@@ -67,10 +67,10 @@
 
 
     <!-- Header -->
+            <?php if($w_current_route != 'default_Auth'): ?>
     <a name="about"></a>
     <div class="intro-header">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
@@ -98,6 +98,8 @@
     </div>
     <!-- /.intro-header -->
 
+    <?php endif;?>
+
     <!-- Page Content -->
 
     <a  name="services"></a>
@@ -108,6 +110,7 @@
 
         </div>
         <!-- /.content-section-a -->
+        <?php if($w_current_route != 'default_Auth'):?>
         <div class="content-section-b">
 
                 <?=$this->section('content-section-b'); ?>
@@ -128,7 +131,7 @@
 
         </div>
         <!-- /.content-section-b -->
-   
+        <?php endif;?>
 
     <a  name="contact"></a>
     <div class="banner">

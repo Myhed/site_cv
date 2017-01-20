@@ -15,7 +15,7 @@
                     <img class="img-responsive" src="<?=$this->assetUrl('img/ipad.png'); ?>" alt="">
                 </div>
             </div>
-                <?php var_dump($experiences); ?>
+                
         </div>
 
 <?php $this->stop('content-section-a'); ?>

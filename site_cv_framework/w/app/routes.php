@@ -2,6 +2,8 @@
 	
 	$w_routes = array(
 		['GET', '/', 'Default#home', 'default_home'],
+		['GET|POST', '/Auth', 'Default#Auth', 'default_Auth'],
+
 		['GET', '/admin', 'Admin#homeAdmin', 'Admin_homeAdmin'],
 		['GET|POST', '/admin/messages', 'Admin#messages', 'Admin_messages'],
 		['GET|POST', '/admin/competences', 'Admin#competence', 'Admin_competence'],

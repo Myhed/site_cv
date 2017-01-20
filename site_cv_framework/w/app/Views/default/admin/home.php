@@ -54,10 +54,15 @@ $t_competence = array_slice($columns[2],17,+3);
 									echo'<td>'.$data['statut'].'</td>';
 
 
+
 								echo'</tr>';
 					?>
+
+					<td><a href="<?=$this->url('Admin_modifier', array('chemin' => 'Admin_homeAdmin','table' => $columns[0][0]['table'],'setPrimaryKey' => $columns[0][0]['name'],'id' => $data['id_utilisateurs'])); ?>" class="btn btn-warning">Modifier</a></td>
 							
 				<?php endforeach;?>
+
+				
 		</table>
 	</div>
 
@@ -80,7 +85,7 @@ $t_competence = array_slice($columns[2],17,+3);
 								echo'<tr>';
 									echo'<td>'.$experience['id_experience'].'</td>';
 									echo'<td>'.$experience['titre_experience'].'</td>';
-									echo'<td>'.$competence['sous_titre_experience'].'</td>';
+									echo'<td>'.$experience['sous_titre_experience'].'</td>';
 									echo'<td>'.$experience['dates'].'</td>';
 									echo'<td>'.$experience['description'].'</td>';
 									echo'<td>'.$experience['id_competence'].'</td>';

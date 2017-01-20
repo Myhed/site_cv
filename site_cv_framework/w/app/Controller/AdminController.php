@@ -3,6 +3,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \W\Model\Model;
+use \W\Security\AuthentificationModel as Auth;
 use Model\HomeAdminModel;
 
 class AdminController extends Controller{
@@ -21,9 +22,11 @@ class AdminController extends Controller{
 
 	private $result = array();
 
+	private $Auth = '';
 	public function __construct(){
 
 		$this->homeModel = new HomeAdminModel();
+		$this->Auth = new Auth();
 		 $this->homeModel->setTable('t_utilisateur');
 			 $this->AllTable [] =$this->homeModel->getTable();
 		 $this->homeModel->setTable('t_competence');
@@ -41,6 +44,7 @@ class AdminController extends Controller{
 			$this->homeModel->getColumnName();
 			$columns[] = $this->homeModel->data;
 			$result[] = $this->homeModel->findAll();
+			$this->Auth = new Auth();
 
 				
 			}
@@ -104,6 +108,7 @@ class AdminController extends Controller{
 
 		if($_POST){
 
+			$_POST['mdp'] = $this->Auth->hashPassword($_POST['mdp']);
 			$this->homeModel->update($_POST,$id_utilisateurs);
 			$this->redirectToRoute($chemin);
 
