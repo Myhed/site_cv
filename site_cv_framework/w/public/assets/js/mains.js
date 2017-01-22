@@ -15,7 +15,11 @@ window.onload = function (){
 		if(i%2){
 
 			div[i].style.backgroundColor = '#0b0c0b';
+
 			div[i].style.color = ' #7cffa6';
+
+			div[i].style.color = 'white';
+
 
 			console.log(i);
 		}else{
