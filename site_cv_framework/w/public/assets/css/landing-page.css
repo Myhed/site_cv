@@ -23,18 +23,17 @@ h6 {
 
 .topnav {
     font-size: 14px;
-    background-color:#46A2D9;
+    background-color:white;
 
 }
 
 .navbar-brand.topnav{
- color:white;
+ 
    
 }
 
 .nav.navbar-nav.navbar-right.topnav > li a{
 
-    color:white;
 }
 
 

@@ -29,11 +29,26 @@
 <?php $this->start('content-section-b');?>
     <div class="container">
         <div class="row">
+            <h2 class="section-heading">Compétences</h2>
+            <hr class="section-heading-spacer">
+               <div class="clearfix"></div>
              <?php foreach ($competence as $key => $value): ?>
-                 <?=
-                 $value['competence_titre'].'<br>'
-                 .$value['competence'].'<br>';
-                  ?>
+                <div class="col-lg-4 col-sm-6">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/courses/1603881/14570827997997_illu-cours_html5-css3.png" alt="" class="media-object" height="40">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><?= $value['competence_titre']?></h4>
+                                    <p><?= $value['competence']?></p>
+                                </div>
+                            </li>
+                        </ul>
+                    
+                </div>
              <?php endforeach; ?>
         </div>
     </div>
@@ -51,7 +66,7 @@
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
                         <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw fa"></i> <span class="network-name">Twitter</span></a>
                         </li>
                         <li>
                             <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>

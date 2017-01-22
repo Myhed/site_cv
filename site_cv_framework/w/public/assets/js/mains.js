@@ -14,13 +14,13 @@ window.onload = function (){
 
 		if(i%2){
 
-			div[i].style.backgroundColor = '#2F2F2F';
-			div[i].style.color = 'white';
+			div[i].style.backgroundColor = '#0b0c0b';
+			div[i].style.color = ' #7cffa6';
 
 			console.log(i);
 		}else{
 
-			div[i].style.backgroundColor = '#B9E2FE';
+			div[i].style.backgroundColor = 'white';
 		
 		}
 
