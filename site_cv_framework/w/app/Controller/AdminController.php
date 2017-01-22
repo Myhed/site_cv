@@ -132,4 +132,22 @@ class AdminController extends Controller{
 
 		$this->show('default/admin/ajouter',['table' => $table]);
 	}
+
+
+	public function test(){
+
+			foreach($this->AllTable as $table){
+
+					$this->homeModel->setTable($table);
+				
+				$this->homeModel->getColumnName();
+				$columns[] = $this->homeModel->data;
+				$result[] = $this->homeModel->findAll();
+				$this->Auth = new Auth();
+
+
+		}
+			$this->show('default/admin/test',array('datas' => $result,'columns' => $columns));
+
+	}
 }
