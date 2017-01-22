@@ -37,7 +37,8 @@
 							<?php echo'<td><a href='.$this->url('Admin_modifier',array('chemin' => 'Admin_experience', 'table' => $columns[0]['table'], 'setPrimaryKey' => $columns[0]['name'],'id' => $experience['id_experience'])).' class="btn btn-warning btn-xs">modifier</a></td>';?>
 							<?php echo'<td><a href='.$this->url('Admin_supprimer',array('chemin' => 'Admin_experience', 'table' => $columns[0]['table'], 'setPrimaryKey' => $columns[0]['name'],'id' => $experience['id_experience'])).' class="btn btn-danger btn-xs">supprimer</a></td>';?>
 								
-								<td><a href="<?=$this->url('Admin_ajouter',['chemin' => 'Admin_competence','table' => $columns[0]['table']]);?>" class="btn btn-info btn-xs ">Ajouter</a></td>
+								
+							<td><a href="<?=$this->url('Admin_ajouter',['chemin' => 'Admin_experience','table' => $columns[0]['table']]);?>" class="btn btn-info btn-xs ">Ajouter</a></td>
 							</tr>
 
 				<?php endforeach; ?>

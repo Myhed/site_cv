@@ -130,7 +130,7 @@ class AdminController extends Controller{
 			$this->redirectToRoute($chemin);
 		}
 
-		$this->show('default/admin/ajouter',['table' => $table]);
+		$this->show('default/admin/ajouter',array('table' => $table));
 	}
 
 
