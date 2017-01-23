@@ -48,7 +48,7 @@ class UsersModel extends Model
 		return false;
 	}
 
-	/**
+	/*     *
 	* Teste si un email est présent en base de données
 	* @param string $email L'email à tester
 	* @return boolean true si présent en base de données, false sinon

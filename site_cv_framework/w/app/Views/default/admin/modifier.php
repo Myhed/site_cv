@@ -1,4 +1,6 @@
-<?php $this->layout('layout.admin',['title' => 'Modifier','LayoutLateralBar' => 'Modification info']); ?>
+
+
+<?php $this->layout('Layout.admin.responsive',['title' => 'Modifier','LayoutLateralBar' => 'Modification info']); ?>
 
 <?php $this->start('main_content'); ?>
 
@@ -21,8 +23,8 @@
 		<div class="form-group">
 			<label for="">Sexe</label>
 			<select name="sexe" id="" class="form-control">
-				<option value="h"  <?= ($datas['sexe'] == 'M') ? 'selected' : ''; ?>>Homme</option>
-				<option value="f"  <?= ($datas['sexe'] == 'F') ? 'selected' : ''; ?>>Femme</option>
+				<option value="M"  <?= ($datas['sexe'] == 'M') ? 'selected' : ''; ?>>Homme</option>
+				<option value="F"  <?= ($datas['sexe'] == 'F') ? 'selected' : ''; ?>>Femme</option>
 			</select>
 		</div>
 		<div class="form-group">

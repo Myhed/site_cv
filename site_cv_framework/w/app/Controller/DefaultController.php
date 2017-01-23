@@ -56,6 +56,8 @@ class DefaultController extends Controller
 			$errors = array();
 		
 			$auth = $this->Auth->isValidLoginInfo($_POST['email'],$_POST['mdp']);
+
+
 			if($auth){
 
 				$datasUsers = $this->homeModel->find($auth);
@@ -64,9 +66,12 @@ class DefaultController extends Controller
 
 				$this->redirectToRoute('Admin_homeAdmin');
 
-			}else{
+				
 
+			}else{
+					
 				$errors['errors'] = "Mot de passe ou nom d'identifiant incorrecte";
+				
 
 			}
 		}

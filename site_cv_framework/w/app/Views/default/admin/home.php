@@ -1,12 +1,14 @@
 <?php
+			
 $t_experience = array();
 
 $t_experience = array_slice($columns[2],20,25);
 $t_competence = array_slice($columns[2],17,+3);
-				
+	
 ?>
 
-<?php $this->layout('layout.admin',array('title' => 'Home',
+
+<?php $this->layout('Layout.admin',array('title' => 'Home',
 										'LayoutLateralBar' => 'Mes infos')); ?>
 
 <?php $this->start('main_content');?>
@@ -28,8 +30,9 @@ $t_competence = array_slice($columns[2],17,+3);
 				<?php foreach($datas[0] as $key => $data):?>
 
 					<?php 
-
+						
 						echo'<tr>';
+
 									echo'<td>'.$data['id_utilisateurs'].'</td>';
 									echo'<td>'.$data['nom'].'</td>';
 									echo'<td>'.$data['prenom'].'</td>';

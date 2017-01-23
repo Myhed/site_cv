@@ -1,7 +1,7 @@
 
 
 
-<?php $this->layout('layout.admin',['title' => 'Experience','LayoutLateralBar' => 'Mes experience']);?>
+<?php $this->layout('Layout.admin.responsive',['title' => 'Experience','LayoutLateralBar' => 'Mes experience']);?>
 		
 
 <?php $this->start('main_content');?>

@@ -21,10 +21,15 @@
 			</div>
 		
 		<ul>
+			
 			<li><a href="<?=$this->url('Admin_homeAdmin'); ?>" class="<?= ($w_current_route == 'Admin_homeAdmin') ? 'active' : ''; ?>">Accueil</a></li>
 			<li><a href="<?=$this->url('Admin_messages'); ?>" class="<?= ($w_current_route == 'Admin_messages') ? 'active' : ''; ?>">Mes messages</a></li>
+			<li><a href="<?= $this->url('Admin_deconnexion'); ?>">Deconnexion</a></li>
 			<li><a href="<?=$this->url('Admin_competence'); ?>"" class="<?= ($w_current_route == 'Admin_competence') ? 'active' : ''; ?>">Mes compétence</a></li>
-			<li><a href="<?=$this->url('Admin_experience');?>" class="<?= ($w_current_route == 'Admin_experience') ? 'active' : ''; ?>"> Mes Experience</a></li>
+
+			<li><a href="<?=$this->url('Admin_experience');?>" class="<?= ($w_current_route == 'Admin_experience') ? 'active' : ''; ?>"> Mes Experiences</a></li>
+
+			
 		</ul>
 		
 	</div>

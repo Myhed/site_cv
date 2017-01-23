@@ -1,4 +1,4 @@
-<?php $this->layout('layout.admin',['title' => 'Ajouter','LayoutLateralBar' => 'Mes ajouts']);
+<?php $this->layout('Layout.admin.responsive',['title' => 'Ajouter','LayoutLateralBar' => 'Mes ajouts']);
 
 ?>
 
@@ -114,7 +114,7 @@
 			</div>
 	<?php endif;?>
 
-		<button class="btn btn-primary">Modifier</button>
+		<button class="btn btn-primary">Ajouter</button>
 	</form>
 
 </div>

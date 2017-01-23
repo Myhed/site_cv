@@ -34,25 +34,24 @@
             <hr class="section-heading-spacer">
                <div class="clearfix"></div>
              <?php foreach ($experiences as $key => $value): ?>
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-6 col-sm-6">
                         <ul class="media-list">
                             <li class="media">
                                 <div class="media-left">
                                     <a href="#">
                                         <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/courses/1603881/14570827997997_illu-cours_html5-css3.png" alt="" class="media-object" height="40">
                                     </a>
+                                    
                                 </div>
+
                                 <div class="media-body">
                                     <h4 class="media-heading"><?= $value['titre_experience'].' - '.$value['sous_titre_experience']?></h4>
                                     <p><strong>En <?= $value['dates']?> </strong></p>
-                                    <?php 
-                                    $description = explode('-',$value['description']);
-
-                                    ?>
-                                    <p><?= $description[0]?></p>
-                                    <p><?= isset($description[1]) ? $description[1] : null;?></p>
-                                    <p><?= isset($description[2]) ? $description[2] : null;?></p>
-                                    <p><?= isset($description[3]) ? $description[3] : null;?></p>
+                                    
+                                        
+                                    <p><?=$value['description']?></p>
+                   
+                                    
                                 </div>
                             </li>
                         </ul>

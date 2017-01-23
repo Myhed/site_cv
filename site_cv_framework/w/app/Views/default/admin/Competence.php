@@ -1,4 +1,4 @@
-<?php $this->layout('layout.admin', ['title' => 'Competences','LayoutLateralBar' => 'Compétence']);?>
+<?php $this->layout('Layout.admin.responsive', ['title' => 'Competences','LayoutLateralBar' => 'Compétence']);?>
 
 <?php $this->start('main_content');?>
 	

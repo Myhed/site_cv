@@ -12,4 +12,5 @@
 		['GET|POST', '/admin/modifier/[:chemin]/[:table]/[:setPrimaryKey]/[i:id]', 'Admin#modifier', 'Admin_modifier'],
 		['GET|POST','/admin/ajouter/[:chemin]/[:table]','Admin#ajouter','Admin_ajouter'],
 		['GET|POST','/admin/test','Admin#test','Admin_test'],
+		['GET|POST','/admin/deconnexion','Admin#deconnexion','Admin_deconnexion'],
 	);

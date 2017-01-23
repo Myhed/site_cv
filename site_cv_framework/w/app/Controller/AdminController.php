@@ -4,6 +4,7 @@ namespace Controller;
 use \W\Controller\Controller;
 use \W\Model\Model;
 use \W\Security\AuthentificationModel as Auth;
+use \W\Security\AuthorizationModel as Author;
 use Model\HomeAdminModel;
 
 class AdminController extends Controller{
@@ -23,16 +24,20 @@ class AdminController extends Controller{
 	private $result = array();
 
 	private $Auth = '';
+
+	private $Author = '';
 	public function __construct(){
 
 		$this->homeModel = new HomeAdminModel();
 		$this->Auth = new Auth();
+		$this->Author = new Author();
 		 $this->homeModel->setTable('t_utilisateur');
 			 $this->AllTable [] =$this->homeModel->getTable();
 		 $this->homeModel->setTable('t_competence');
 		 $this->AllTable [] = $this->homeModel->getTable();
 		 $this->homeModel->setTable('t_experience');
 		  $this->AllTable [] =$this->homeModel->getTable();
+
 	}
 
 	public function homeAdmin(){
@@ -44,18 +49,19 @@ class AdminController extends Controller{
 			$this->homeModel->getColumnName();
 			$columns[] = $this->homeModel->data;
 			$result[] = $this->homeModel->findAll();
-			$this->Auth = new Auth();
-
+			
 				
 			}
 
-			
+
+
 
 		$this->show('default/admin/home', array('datas' => $result,'columns' => $columns));
+					
 	}
 
 	public function messages(){
-
+			$this->Author->isGranted('Admin');
 		$this->show('default/admin/Messages');
 	}
 
@@ -64,7 +70,7 @@ class AdminController extends Controller{
 		 $this->homeModel->getColumnName();
 		$columns = $this->homeModel->data;
 		$datas_competence = $this->homeModel->findAll();
-
+		$this->Author->isGranted('Admin');
 		$this->show('default/admin/Competence',['datas_competence' => $datas_competence,'columns' => $columns]);
 	}
 
@@ -75,12 +81,12 @@ class AdminController extends Controller{
 		$experiences = $this->homeModel->findAll();
 		$this->homeModel->getColumnName();
 		$columns = $this->homeModel->data;
-
+		$this->Author->isGranted('Admin');
 		$this->show('default/admin/experience',array('experiences' => $experiences,'columns' => $columns));
 	}
 
 	public function supprimer($chemin,$table,$setPrimaryKey,$id){
-
+			$this->Author->isGranted('Admin');
 			$this->homeModel->setTable($table);
 			 $this->homeModel->setPrimaryKey($setPrimaryKey);
 			 
@@ -108,6 +114,11 @@ class AdminController extends Controller{
 
 		if($_POST){
 
+			if(isset($_POST['mdp'])){
+
+				$_POST['mdp'] = $this->Auth->hashPassword($_POST['mdp']);
+			
+			}
 
 			$this->homeModel->update($_POST,$id_utilisateurs);
 			$this->redirectToRoute($chemin);
@@ -116,7 +127,7 @@ class AdminController extends Controller{
 		$findId = $this->homeModel->find($id_utilisateurs);
 
 		/*$getAllById = $this->homeModel->findAll*/
-
+			/*$this->Author->isGranted('Admin');*/
 		$this->show('default/admin/modifier',['datas' => $findId,'table' => $table]);
 	}
 
@@ -133,6 +144,13 @@ class AdminController extends Controller{
 		$this->show('default/admin/ajouter',array('table' => $table));
 	}
 
+	public function deconnexion(){
+
+		$this->Auth->logUserOut();
+		$this->Author->isGranted('Admin');
+		$this->redirectToRoute('default_Auth');
+	}
+
 
 	public function test(){
 
@@ -147,6 +165,7 @@ class AdminController extends Controller{
 
 
 		}
+		$this->Author->isGranted('Admin');
 			$this->show('default/admin/test',array('datas' => $result,'columns' => $columns));
 
 	}
