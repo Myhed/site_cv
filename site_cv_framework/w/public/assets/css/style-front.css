@@ -1,4 +1,15 @@
 .intro-header {
     color: #f8f8f8;
-    background: url("../img/intro-banner.png") no-repeat center center;
+    background: none;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+
+
+header{
+	background:none;
 }

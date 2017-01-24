@@ -15,19 +15,9 @@
                <img class="img-responsive" src="" alt="">
            </div>
                        </div> -->
-          
-             
-             
-
-
-           
         <!-- </div> -->
 
-    <!-- </div> -->
-
-                                    
-                                    
-
+    <!-- </div> -->     
          <div class="container">
         <div class="row">
             <h2 class="section-heading">Expériences et formations</h2>
@@ -94,6 +84,15 @@
     </div>
 <?php $this->stop('content-section-b');?>
 
+<!-- <?php $this->start('content-section-parallax'); ?>
+<div class="container">
+    <div class="row" id="content-game">
+        <h2 class="section-heading">Mes centres d'intêret</h2>
+            <hr class="section-heading-spacer">
+               <div class="clearfix"></div>
+    </div> 
+</div> -->
+<?php $this->stop('content-section-parallax'); ?>
 
         
 <?php $this->start('banner'); ?>
@@ -101,7 +100,7 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>Connect to Start Bootstrap:</h2>
+                    <h2>Me contacter sur les réseau sociaux</h2>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">

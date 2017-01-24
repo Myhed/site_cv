@@ -22,6 +22,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<?=$this->assetUrl('css/style-front.css');?>">
     <script src="<?= $this->assetUrl('js/mains.js'); ?>"></script>
+    <script type="text/javascript" src="<?=$this->assetUrl('js/phaser-js/phaser.min.js') ?>"></script>
+    <script type="text/javascript" src="<?=$this->assetUrl('js/phaser-js/phaser.js') ?>"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,6 +52,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right topnav">
+                    <?php if($w_current_route == 'default_Auth'):?>
+                      <li>
+                        <a href="<?= $this->url('default_Auth'); ?>">Connexion</a>
+                    </li>
+                    <li><a href="<?= $this->url('default_home'); ?>">Retour à l'accueil</a></li>
+
+                    <?php else: ?>
                     <li>
                         <a href="#about">Apropos</a>
                     </li>
@@ -59,6 +68,7 @@
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
+                <?php endif; ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -69,6 +79,8 @@
 
     <!-- Header -->
             <?php if($w_current_route != 'default_Auth'): ?>
+ <div class="parallax-window" data-parallax="scroll" data-image-src="<?= $this->assetUrl('img/intro-banner.png') ?>">
+                    
     <a name="about"></a>
     <div class="intro-header">
         <div class="container">
@@ -99,10 +111,11 @@
     </div>
     <!-- /.intro-header -->
 
+ </div>
     <?php endif;?>
 
     <!-- Page Content -->
-
+    
     <a  name="services"></a>
         <div class="content-section-a">
 
@@ -112,6 +125,7 @@
         </div>
         <!-- /.content-section-a -->
         <?php if($w_current_route != 'default_Auth'):?>
+     
         <div class="content-section-b">
 
                 <?=$this->section('content-section-b'); ?>
@@ -120,20 +134,20 @@
 
         </div>
         <!-- /.content-section-b -->
-        <div class="content-section-a">
+      <div class="parallax-window" data-parallax="scroll" data-image-src="<?= $this->assetUrl('img/intro-banner.png') ?>">
+          <?=$this->section('content-section-parallax')?>
 
-                <?= $this->section('content-section-c'); ?>
-        <!-- /.content-section-a -->
-        </div>
-
+          <!-- /.container -->
+      </div>
         <div class="content-section-b">
                 
                 <?=$this->section('content-section-d'); ?>
+                <!-- /.container -->
 
         </div>
         <!-- /.content-section-b -->
         <?php endif;?>
-
+    
     <a  name="contact"></a>
     <div class="banner">
 
@@ -157,5 +171,7 @@
     <script src="<?=$this->assetUrl("js/bootstrap.min.js");?>"></script>
 
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="<?= $this->assetUrl('js/parallax/parallax.js') ?>"></script>
+<script src="<?= $this->assetUrl('js/parallax/parallax.jquery.js') ?>"></script>
 </html>

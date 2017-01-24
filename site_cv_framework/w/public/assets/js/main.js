@@ -1,6 +1,6 @@
 window.onload = function(){
 
-	var table_row = document.getElementsByTagName('tr');
+/*	var table_row = document.getElementsByTagName('tr');
 
 	var titreBarre = document.getElementsByClassName('titre-barre-lateral')[0];
 
@@ -66,7 +66,7 @@ window.onload = function(){
 			
 		}
 
-	}
+	}*/
 
 
 	
