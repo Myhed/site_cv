@@ -1,0 +1,10 @@
+@function set_text_color($color){
+
+	@if(lightness($color) > 50 ){
+
+		@return #ffffff;
+	} @else{
+
+		@return #000000;
+	}
+}
