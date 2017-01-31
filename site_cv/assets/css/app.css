@@ -2865,28 +2865,28 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4; }
+  background-color: #D1C9CB;
+  border-color: #c5bbbe; }
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
-    background-color: #286090;
-    border-color: #122b40; }
+    background-color: #baadb0;
+    border-color: #8b767b; }
   .btn-primary:hover {
     color: #fff;
-    background-color: #286090;
-    border-color: #204d74; }
+    background-color: #baadb0;
+    border-color: #a99a9e; }
   .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #286090;
-    border-color: #204d74; }
+    background-color: #baadb0;
+    border-color: #a99a9e; }
     .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,
     .open > .btn-primary.dropdown-toggle:hover,
     .open > .btn-primary.dropdown-toggle:focus,
     .open > .btn-primary.dropdown-toggle.focus {
       color: #fff;
-      background-color: #204d74;
-      border-color: #122b40; }
+      background-color: #a99a9e;
+      border-color: #8b767b; }
   .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
     background-image: none; }
@@ -2894,10 +2894,10 @@ fieldset[disabled] a.btn {
   fieldset[disabled] .btn-primary:hover,
   fieldset[disabled] .btn-primary:focus,
   fieldset[disabled] .btn-primary.focus {
-    background-color: #337ab7;
-    border-color: #2e6da4; }
+    background-color: #D1C9CB;
+    border-color: #c5bbbe; }
   .btn-primary .badge {
-    color: #337ab7;
+    color: #D1C9CB;
     background-color: #fff; }
 
 .btn-success {
@@ -4285,7 +4285,7 @@ a.badge:hover, a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eeeeee; }
+  background-color: #4f3f44; }
   .jumbotron h1,
   .jumbotron .h1 {
     color: inherit; }
@@ -4294,7 +4294,7 @@ a.badge:hover, a.badge:focus {
     font-size: 21px;
     font-weight: 200; }
   .jumbotron > hr {
-    border-top-color: #d5d5d5; }
+    border-top-color: #33282c; }
   .container .jumbotron,
   .container-fluid .jumbotron {
     border-radius: 6px;
@@ -5018,8 +5018,8 @@ button.list-group-item-danger {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
+  background-color: #BBA9B5;
+  border: 1px solid #ab95a4;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
@@ -8147,7 +8147,7 @@ html body {
   font-family: 'Roboto', sans-serif; }
 
 .navbar.navbar-default {
-  font-size: 22px;
+  font-size: 16px;
   margin-bottom: 0; }
   .navbar.navbar-default a.navbar-brand {
     font-size: 30px;
@@ -8161,6 +8161,8 @@ html body {
     top: 0; }
   .navbar.navbar-default .active {
     color: red; }
+  .navbar.navbar-default .nav.navbar-nav.navbar-right li {
+    display: inline-block; }
 
 .navbar-default .navbar-nav .active > a {
   border-radius: 23px;
@@ -8171,7 +8173,7 @@ html body {
 .navbar-default .navbar-nav li > a {
   padding: 0;
   margin-top: 15px;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 15px 10px 15px;
   opacity: 0.5; }
 
 .navbar-default .navbar-nav li > a:hover {
@@ -8230,12 +8232,35 @@ body {
     color: #ffffff; }
 
 .section-c {
-  background: #FADFC2; }
+  background: #FADFC2;
+  padding: 10px 0 0 0; }
+  .section-c .btn.btn-primary {
+    margin-bottom: 10px; }
+  .section-c h2 {
+    margin-bottom: 30px;
+    color: #ffffff; }
+
+.jumbotron {
+  color: white; }
+
+.navbar-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: -10px; }
+
+.well {
+  margin-top: 55px; }
+  .well h2 {
+    color: #ffffff;
+    padding: 0 0 12px 0; }
 
 footer {
   background: #baadb0;
   padding: 30px 0;
   color: #ffffff; }
+  footer .copyright {
+    text-align: center;
+    font-size: 16px; }
 
 @media only screen and (max-width: 480px) {
   #main-header {

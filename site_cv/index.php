@@ -1,64 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-    <title>Starter Template for Bootstrap</title>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <!-- Bootstrap core CSS -->
-   
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-  
-    <nav class="navbar navbar-default">
-     <a class="navbar-brand" href="#"><p>Myhed.</p>Ben-Rhouma</p></a>
-      <div class="container">
-        <div class="navbar-header">
-
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          
-         
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li ><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <header id="main-header">
-        <div class="intro-header">
-            <div class="container">
-                  <h1>MYHED BENRHOUMA</h1>
-                  <p class="lead">Integrateur/developpeur web</p>
-            </div>
-              
-
-        </div>
-    </header>
-
+<?php require_once'inc/init.inc.php'; ?>
+<?php require_once'inc/haut.inc.php'; ?>
         <div class="section-a">
           <div class="container">
                 <div class="row">
@@ -129,24 +70,15 @@
         <div class="section-c"> 
             <div class="container"> 
                 <div class="row"> 
-                    <div class="col-md-8">
-                        <p>hEY</p>
+                    <div class="col-md-8 col-md-offset-2">
+                    <h2>S'inscrire à ma newsletter</h2>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                              <input type="text" placeholder="Saisissez votre email..." class="form-control input-lg">
+                            </div>
+                            <button class="btn btn-primary">S'inscrire</button>
+                        </form>
                     </div>
                 </div>
            </div>
-
-           <footer> 
-                <div class="container"> 
-                  <p>Copyright &copy; 2017 Myhed theme</p>
-                </div>
-           </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-      
-    
-    <script src="assets/bower_components/jquery/dist/jquery.js"></script>
-    <script src="assets/js/Utilitaire.js"></script>
-    <script src="assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
-  </body>
-</html>
+<?php require_once'inc/bas.inc.php'; ?>

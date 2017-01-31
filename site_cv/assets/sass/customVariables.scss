@@ -142,6 +142,9 @@ $table-bg-active:               $table-bg-hover !default;
 //** Border color for table and cell borders.
 $table-border-color:            #ddd !default;
 
+//custom variable 
+
+$mainColor : #D1C9CB;
 
 //== Buttons
 //
@@ -154,7 +157,7 @@ $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
 $btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-bg:                 $mainColor !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
 $btn-success-color:              #fff !default;
@@ -490,12 +493,15 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 
 
 //== Jumbotron
+//custom Color jumbotron
+	
+	$jumbotron-Custom : #6C555D;
 //
 //##
 
 $jumbotron-padding:              30px !default;
 $jumbotron-color:                inherit !default;
-$jumbotron-bg:                   $gray-lighter !default;
+$jumbotron-bg:                   darken($jumbotron-Custom,10%) !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
@@ -766,10 +772,14 @@ $thumbnail-caption-padding:   9px !default;
 
 
 //== Wells
+//custom well
+	
+	$well-Custom : #BBA9B5;
+
 //
 //##
 
-$well-bg:                     #f5f5f5 !default;
+$well-bg:                     $well-Custom !default;
 $well-border:                 darken($well-bg, 7%) !default;
 
 
