@@ -1,0 +1,12 @@
+{
+    "name": "etudiant/site_cv",
+    "authors": [
+        {
+            "name": "Myhed",
+            "email": "capuchondu92@hotmail.fr"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^3.2"
+    }
+}

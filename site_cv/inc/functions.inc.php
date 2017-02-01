@@ -47,4 +47,45 @@ if(!function_exists('verif_field')){
 
 
 
+//Cette fonction va nous vérifier si le compte existe en vérifiant l'email ou le prenom avec le mot de passe
 
+if(!function_exists('verif_compte')){
+
+	function verif_compte($identifiant,$mdp,$name = null){
+
+		global $bdd;
+
+		$verif_compte = $bdd->prepare("SELECT email,name,password FROM users WHERE email = :identifiant OR name = :identifiant  AND password = :mdp ");
+		$verif_compte->bindParam(':identifiant',$identifiant,PDO::PARAM_STR);
+		$verif_compte->bindParam(':mdp',$mdp,PDO::PARAM_STR);
+		if($name != null){
+
+		$verif_compte->bindParam(':name',$name,PDO::PARAM_STR);
+
+		}
+
+		$verif_compte->execute();
+
+		return $verif_compte->rowCount();
+	}
+}
+
+// function qui va nous donner tous les informations de l'utilisateur
+
+if(!function_exists('get_users')){
+
+	function get_users($email , $name = null){
+
+		global $bdd;
+
+		$get_users_connect =  $bdd->prepare("SELECT * FROM users WHERE email = :email");
+
+		$get_users_connect->bindParam(':email',$email,PDO::PARAM_STR);
+
+		$get_users_connect->execute();
+
+		$data_users = $get_users_connect->fetch(PDO::FETCH_ASSOC);
+
+		return $data_users;
+	}
+}

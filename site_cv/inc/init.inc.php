@@ -1,4 +1,5 @@
 <?php 
+use Symfony\Component\VarDumper;
 // Connexions à la base de données
 	try{
 		$bdd = new PDO('mysql:host=localhost;dbname=cv','root','');
@@ -11,13 +12,12 @@
 	}
 //Variables contenu et errors
 
-
-
 $contenu = '';
 
 //Racine du site
 
 
 //inclusion des fonctions
+
 
 require_once'functions.inc.php';

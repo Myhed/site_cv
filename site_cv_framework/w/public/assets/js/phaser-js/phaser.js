@@ -3,7 +3,7 @@ var game = new Phaser.Game(800,400,Phaser.AUTO,'content-game',{preload : preload
 var pathRoot = '/CV_dev/site_cv/site_cv_framework/w/public/assets/img/phaser/phaser-01/';
 console.log(pathRoot+'sky.png');
 function preload() {
-	game.load.image('sky',pathRoot+'sky.png');
+	
 	game.load.image('ground',pathRoot+'platform.png');
 	game.load.image('star' , pathRoot+'star.png');
 	game.load.spritesheet('dude',pathRoot+'dude.png',32,48);
@@ -13,6 +13,7 @@ var platforms;
 var player
 function create() {
 
+ game.stage.backgroundColor = 'rgb(68, 136, 170,0)';
 game.physics.startSystem(Phaser.Physics.ARCADE);
 
  game.add.sprite(0,0,'sky');
