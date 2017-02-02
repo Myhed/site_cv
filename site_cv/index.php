@@ -1,11 +1,12 @@
 <?php require_once'inc/init.inc.php'; ?>
 <?php require_once'inc/haut.inc.php'; ?>
+
         <div class="section-a">
           <div class="container">
                 <div class="row">
                   <div class="col-md-4">
                       <i class="fa fa-html5"></i>
-                      <h3>Apprentissage de l'html 5</h3>
+                      <h3>Apprentissage du html 5</h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime hic excepturi, at quidem non beatae. Quos sit necessitatibus, ducimus, saepe sapiente sint esse, quo, odit dolor assumenda in praesentium corporis.</p>
                   </div>
                   <div class="col-md-4">
@@ -15,7 +16,7 @@
                   </div>
                   <div class="col-md-4">
                       <i class="fa fa-lightbulb-o"></i> 
-                      <h3>Customisable</h3>
+                      <h3>Customizable</h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime hic excepturi, at quidem non beatae. Quos sit necessitatibus, ducimus, saepe sapiente sint esse, quo, odit dolor assumenda in praesentium corporis.</p>
                   </div>
                 </div>

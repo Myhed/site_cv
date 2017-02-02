@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require_once'inc/init.inc.php';
 
 //On vérifie qu'il y'ait bien un des données poster dans le formulaire
@@ -17,7 +17,7 @@ if($_POST){
 
 				$_SESSION['Auth'] = get_users($email);
 
-				dump($_SESSION['Auth']);
+			
 
 
 			}else{

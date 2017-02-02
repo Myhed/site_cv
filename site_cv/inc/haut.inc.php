@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
+    <meta description="Cv de Myhed Ben-Rhouma Développeur/Intégrateur WEB">
+    <meta keywords="myhed, ben-Rhouma , myhed ben-Rhouma, developpeur web, ">
     <title>Starter Template for Bootstrap</title>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
@@ -40,11 +41,12 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li ><a href="#about">Apropos</a></li>
+            <li class="active"><a href="#">Accueil</a></li>
+            <li ><a href="#about">A propos</a></li>
             <li><a href="#contact">Contact</a></li>
-               <li><a class="signUp" href="#"><span class="fa fa-user"></span> Sign Up</a></li>
-            <li><a href="connexion.php" class="login"><span class="fa fa-sign-in"></span> Login</a></li>
+               <!-- <li><a class="signUp" href="#"><span class="fa fa-user"></span> S'inscrire</a></li> -->
+
+            <li><a href="connexion.php" class="login"> | <span class="fa fa-sign-in"></span>Connexion</a></li>
           </ul>
          
         </div><!--/.nav-collapse -->
