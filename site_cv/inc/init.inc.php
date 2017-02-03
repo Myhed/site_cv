@@ -1,4 +1,4 @@
-<?php 
+<?php
 // Connexions à la base de données
 	try{
 		$bdd = new PDO('mysql:host=localhost;dbname=cv','root','');
@@ -15,7 +15,7 @@ $contenu = '';
 
 //Racine du site
 
-	define('WEBROOT','site_cv/');
+	
 
 
 //inclusion des fonctions

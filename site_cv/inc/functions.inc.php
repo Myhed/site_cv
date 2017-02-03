@@ -1,4 +1,4 @@
-<?php 
+<?php
 //Cette fonction permet de retourner la page dans laquelle actuellement ou l'utilisateur se trouve
 if(!function_exists('that_is_it')){
 
@@ -74,13 +74,15 @@ if(!function_exists('verif_compte')){
 
 if(!function_exists('get_users')){
 
-	function get_users($email , $name = null){
+	function get_users($identifiant){
 
 		global $bdd;
 
-		$get_users_connect =  $bdd->prepare("SELECT * FROM users WHERE email = :email");
 
-		$get_users_connect->bindParam(':email',$email,PDO::PARAM_STR);
+		$get_users_connect =  $bdd->prepare("SELECT * FROM users WHERE email = :email OR name = :name");
+
+		$get_users_connect->bindParam(':email',$identifiant,PDO::PARAM_STR);
+		$get_users_connect->bindParam(':name',$identifiant,PDO::PARAM_STR);
 
 		$get_users_connect->execute();
 
@@ -95,44 +97,63 @@ if(!function_exists('get_users')){
 if(!function_exists('session_started')){
 
 	function session_started(){
-	// On déclare une variables qui contiendra toutes nos pages
-	$pages = array();
+					// On déclare une variables qui contiendra toutes nos pages
+					$pages = array();
+					//On définis une variable qui nous affichera le chemin de notre route qui sera variable
+					$earlie_path = $_SERVER['SCRIPT_FILENAME'];
+						//On explose le chemin qui sera variable selon les dossier parcourus
+					$explode_path = explode('/',$earlie_path);
+	//Si notre tableau qui a été explosé contient 7 élement dedans c'est qu'on est dans notre dossier racine
+				if(count($explode_path) == 7){
 
-	// On crée une variables qui contiendra le chemin du dossier racine du site
-	$directory = '../site_cv';
+						//chemin dossier racine
 
-	//Nous scannons tous ce qu'il y'a dans le répertoir site_cv en veillant enlevant bien les points qui nous servent à rien 
-	$scanned_page = array_diff(scandir($directory), array('..', '.'));
-	
-	//Ensuite nous parcourons notre scanne du dossier
-	foreach($scanned_page as $key => $value){
-		// On explose la chaîne de caractère à .php afin qu'il nous reste que le nom du dossier
-		$setKey = explode('.php',$value);
-		// On veille à remplacer tous ce qu'il y'a dans notre variable $key par le nom du dossier
-		//pour qu'il devienne un tableau associatif
-		$key = $setKey[0];
+						$end_root = $explode_path[0].'/'.$explode_path[1].'/'.$explode_path[2].'/'.$explode_path[3].'/'.$explode_path[4].'/'.$explode_path[5].'/';
+						// On crée une variables qui contiendra le chemin du dossier racine du site et de l'admin part rapport au chemin racine  donc site_cv
+						$directory = '../site_cv';
+						$directory_admin = 'admin/';
 
-		//On analyse toutes les extension dans le dossier site_cv et nous récupérons que les fichier
-		//Contenant l'extension php
-		$extension = strpos($value,'.php');
-		// Si il trouve bien des extension php alors il nous les affiche
-		if($extension){
-			// On crée une variable extension_php qui sera un tableau
-			$extension_php = array();
-			//Ensuite nous faisons en sorte que dans notre tableau il y'a une clés pour chacune de nos page pour qu'il soit ensuite manipulable
-			$extension_php[$key] = $value;
-			//Si la clé est égale à l'index qui est l'accueil ou à la connexion
-			if($key == 'index' || $key == 'connexion'){
-				//On pousse dans notre tableau pages les page nécéssaire avec sa clé
-				$pages [$key] = $value;
+					}else if(count($explode_path) == 8){
+
+						$end_admin = $explode_path[0].'/'.$explode_path[1].'/'.$explode_path[2].'/'.$explode_path[3].'/'.$explode_path[4].'/'.$explode_path[5].'/'.$explode_path[6].'/';
+						// On crée une variables qui contiendra le chemin du dossier racine du site et de l'admin part rapport au chemin admin
+						$directory = '../../site_cv';
+						$directory_admin = '../admin/';
+				}
+
+				//Nous scannons tous ce qu'il y'a dans le répertoir site_cv en veillant enlevant bien les points qui nous servent à rien
+				$scanned_page = array_diff(scandir($directory), array('..', '.'));
+
+				//Ensuite nous parcourons notre scanne du dossier
+				foreach($scanned_page as $key => $value){
+					// On explose la chaîne de caractère à .php afin qu'il nous reste que le nom du dossier
+					$setKey = explode('.php',$value);
+					// On veille à remplacer tous ce qu'il y'a dans notre variable $key par le nom du dossier
+					//pour qu'il devienne un tableau associatif
+					$key = $setKey[0];
+
+					//On analyse toutes les extension dans le dossier site_cv et nous récupérons que les fichier
+					//Contenant l'extension php
+					$extension = strpos($value,'.php');
+					// Si il trouve bien des extension php alors il nous les affiche
+					if($extension){
+						// On crée une variable extension_php qui sera un tableau
+						$extension_php = array();
+						//Ensuite nous faisons en sorte que dans notre tableau il y'a une clés pour chacune de nos page pour qu'il soit ensuite manipulable
+						$extension_php[$key] = $value;
+						//Si la clé est égale à l'index qui est l'accueil ou à la connexion
+						if($key == 'index' || $key == 'connexion'){
+							//On pousse dans notre tableau pages les page nécéssaire avec sa clé
+							$pages [$key] = $value;
+
 			}
 
 		}
 
 	}
-	//On définis le chemin de notre admin 
-	$directory_admin = 'admin/';
-	//Nous scannons tous ce qu'il y'a dans le répertoir site_cv en veillant enlevant bien les points qui nous servent à rien 
+
+
+	//Nous scannons tous ce qu'il y'a dans le répertoir site_cv en veillant enlevant bien les points qui nous servent à rien
 	$scanned_admin = array_diff(scandir($directory_admin), array('..', '.'));
 		//Ensuite nous parcourons notre scanne du dossier
 		foreach ($scanned_admin as $key => $value) {
@@ -147,7 +168,7 @@ if(!function_exists('session_started')){
 
 		}
 	//On retourne notre tableau
-		
+
 	return $pages;
 	}
 
@@ -170,12 +191,11 @@ if(!function_exists('is_page_session')){
 			if(in_array($page,$pages)){
 					//démarage de la session
 					session_start();
-				
+
 				}
 			}
 		}
-		
+
 	}
 
 }
-

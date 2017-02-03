@@ -11,11 +11,11 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/app.css">
     <!-- Bootstrap core CSS -->
-   
+
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -24,7 +24,7 @@
   </head>
 
   <body>
-  
+
     <nav class="navbar navbar-default">
      <a class="navbar-brand" href="#"><p>Myhed.</p>Ben-Rhouma</p></a>
       <div class="container">
@@ -36,8 +36,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          
-         
+
+
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -48,12 +48,12 @@
 
             <li><a href="connexion.php" class="login"> | <span class="fa fa-sign-in"></span>Connexion</a></li>
           </ul>
-         
+
         </div><!--/.nav-collapse -->
       </div>
-     
+
     </nav>
-    
+
     <?php if(that_is_it() == 'index.php'): ?>
     <header id="main-header">
         <div class="intro-header">
@@ -61,11 +61,9 @@
                   <h1>MYHED BENRHOUMA</h1>
                   <p class="lead">Integrateur/developpeur web</p>
             </div>
-              
+
 
         </div>
     </header>
 
   <?php endif; ?>
-
-  

@@ -16,9 +16,7 @@ if($_POST){
 				//Faire en sorte de le rediriger vers la page admin
 
 				$_SESSION['Auth'] = get_users($email);
-
-			
-
+				header('location:admin/membre.php');
 
 			}else{
 
@@ -31,17 +29,17 @@ if($_POST){
 
 		$errors ['Erreur/tous les champs'] = 'Veuillez saisir tous vos champs';
 	}
- }
+}
 ?>
 
 <?php require_once'inc/haut.inc.php'; ?>
-	
+
 	<div class="jumbotron">
-		
+
 		<div class="container">
 
 			<div class="row">
-				
+
 				<p>Si vous n'avez pas de compte dans mon portefolio afin de pouvoir parler avec moi via le t-chat du site veuillez demander un accées en me contactant via l'adress email suivant : <strong>myhed.ben-rhouma@lepoles.fr</strong> </p>
 
 			</div>
@@ -64,7 +62,7 @@ if($_POST){
 		</form>
 
 	</div>
-		
+
 	</div>
 
 <?php require_once'inc/bas.inc.php'; ?>
