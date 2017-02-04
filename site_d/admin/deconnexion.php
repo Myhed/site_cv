@@ -4,4 +4,4 @@
 
 <?php session_destroy();
 $_SESSION = [];
-header('location:<?= WEBROOT ?>connexion.php');
+header('location:'.WEBROOT.'connexion.php');

@@ -1,5 +1,2 @@
-
-<?php require_once'../inc/inc-superAdmin/haut.inc-superAdmin.php';?>
-		
-
-<?php require_once'../inc/inc-superAdmin/bas.inc-superAdmin.php';?>
+<?php require_once'../inc/haut.inc.php';?>
+<?php require_once'../inc/bas.inc.php';?>

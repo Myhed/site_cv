@@ -55,7 +55,7 @@ if(!function_exists('verif_compte')){
 
 		global $bdd;
 
-		$verif_compte = $bdd->prepare("SELECT email,name,password FROM users WHERE email = :identifiant OR name = :identifiant  AND password = :mdp ");
+		$verif_compte = $bdd->prepare("SELECT email,pseudo,password FROM users WHERE email = :identifiant OR pseudo = :identifiant  AND password = :mdp ");
 		$verif_compte->bindParam(':identifiant',$identifiant,PDO::PARAM_STR);
 		$verif_compte->bindParam(':mdp',$mdp,PDO::PARAM_STR);
 		if($name != null){
@@ -79,10 +79,10 @@ if(!function_exists('get_users')){
 		global $bdd;
 
 
-		$get_users_connect =  $bdd->prepare("SELECT * FROM users WHERE email = :email OR name = :name");
+		$get_users_connect =  $bdd->prepare("SELECT * FROM users WHERE email = :email OR pseudo = :pseudo");
 
 		$get_users_connect->bindParam(':email',$identifiant,PDO::PARAM_STR);
-		$get_users_connect->bindParam(':name',$identifiant,PDO::PARAM_STR);
+		$get_users_connect->bindParam(':pseudo',$identifiant,PDO::PARAM_STR);
 
 		$get_users_connect->execute();
 
