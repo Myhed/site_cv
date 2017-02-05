@@ -3934,8 +3934,8 @@ tbody.collapse.in {
       margin-right: 0; } }
 
 .navbar-default {
-  background-color: #c2b7ba;
-  border-color: #b3a5a9; }
+  background-color: #59464d;
+  border-color: #47383d; }
   .navbar-default .navbar-brand {
     color: white; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -3962,7 +3962,7 @@ tbody.collapse.in {
       background-color: #888; }
   .navbar-default .navbar-collapse,
   .navbar-default .navbar-form {
-    border-color: #b3a5a9; }
+    border-color: #47383d; }
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: transparent;
     color: white; }
@@ -4286,7 +4286,7 @@ a.badge:hover, a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #4f3f44; }
+  background-color: #baadb0; }
   .jumbotron h1,
   .jumbotron .h1 {
     color: inherit; }
@@ -4295,7 +4295,7 @@ a.badge:hover, a.badge:focus {
     font-size: 21px;
     font-weight: 200; }
   .jumbotron > hr {
-    border-top-color: #33282c; }
+    border-top-color: #a29296; }
   .container .jumbotron,
   .container-fluid .jumbotron {
     border-radius: 6px;
@@ -4690,7 +4690,7 @@ button.list-group-item-danger {
 
 .panel {
   margin-bottom: 20px;
-  background-color: #fff;
+  background-color: #D1C9CB;
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -4910,12 +4910,12 @@ button.list-group-item-danger {
   border-color: #ddd; }
   .panel-default > .panel-heading {
     color: #333333;
-    background-color: #D1C9CB;
+    background-color: transparent;
     border-color: #ddd; }
     .panel-default > .panel-heading + .panel-collapse > .panel-body {
       border-top-color: #ddd; }
     .panel-default > .panel-heading .badge {
-      color: #D1C9CB;
+      color: transparent;
       background-color: #333333; }
   .panel-default > .panel-footer + .panel-collapse > .panel-body {
     border-bottom-color: #ddd; }
@@ -8228,7 +8228,7 @@ body {
 .section-a {
   padding: 30px 0;
   text-align: center;
-  background: #D1C9CB;
+  background: #6C555D;
   color: #ffffff; }
   .section-a .fa {
     font-size: 60px;
@@ -8255,6 +8255,15 @@ body {
   .section-b .panel-heading h4 {
     color: #ffffff; }
 
+.panel.panel-default {
+  margin-top: 30px; }
+  .panel.panel-default .panel-heading {
+    color: #000000; }
+  .panel.panel-default .panel-body {
+    color: #000000; }
+    .panel.panel-default .panel-body .btn.btn-primary {
+      background: #6C555D !important; }
+
 .section-c {
   background: #FADFC2;
   padding: 10px 0 0 0; }
@@ -8262,7 +8271,7 @@ body {
     margin-bottom: 10px; }
   .section-c h2 {
     margin-bottom: 30px;
-    color: #ffffff; }
+    color: #000000; }
 
 .jumbotron {
   color: white; }
@@ -8279,7 +8288,7 @@ body {
     padding: 0 0 12px 0; }
 
 footer {
-  background: #baadb0;
+  background: #4f3f44;
   padding: 30px 0;
   color: #ffffff; }
   footer .copyright {

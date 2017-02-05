@@ -219,3 +219,110 @@ if(!function_exists('is_active')){
 
 	}
 }
+
+//cette fonction va nous retounrer s'il y'a des champs vide 
+
+if(!function_exists('not_empty')){
+
+	function not_empty($fields = []){
+
+		if(count($fields) > 0){
+
+			foreach($fields as $field){
+
+				if(empty($_POST[$field]) && trim($_POST[$field]) === ''){
+
+					return false;
+				}
+			}
+
+			return true;
+		}
+
+	}
+}
+
+//Cette fonction va nous permettre de récupérer tous les champs dans n'importe quelle table
+if(!function_exists('get_in_table')){
+
+	function get_in_table($table){
+
+		global $bdd;
+		$query = $bdd->query("SELECT * FROM $table");
+
+		$infos_users = $query->fetch(PDO::FETCH_ASSOC);
+
+
+		return $infos_users;
+
+	}
+}
+
+//Cette fonction va nous permettre de savoir s'il y'a au moins un enregistrement dans une tableau pour savoir si il faut faire une update ou une insert
+
+if(!function_exists('insert_or_update')){
+
+	function insert_or_update($table){
+
+		global $bdd;
+
+		$query = $bdd->query("SELECT * FROM $table");
+
+		$row = $query->rowCount();
+
+		if($row < 1){
+
+			$req = $bdd->prepare("INSERT INTO infos_users(nom,prenom,tel,ville,description,id_users) 
+							VALUES(:nom,:prenom,:tel,:ville,:description,:id_users)
+			");
+
+		}else{
+
+				$req = $bdd->prepare("UPDATE infos_users
+			SET nom = :nom, prenom = :prenom , tel = :tel , ville = :ville , description = :description WHERE id_users = :id_users ");
+			
+		}
+
+		$req->bindParam(':nom',$_POST['nom'],PDO::PARAM_STR);
+		$req->bindParam(':prenom',$_POST['prenom'],PDO::PARAM_STR);
+		$req->bindParam(':tel',$_POST['tel'],PDO::PARAM_STR);
+		$req->bindParam(':ville',$_POST['ville'],PDO::PARAM_STR);
+		$req->bindParam(':description',$_POST['description'],PDO::PARAM_STR);
+		$req->bindParam(':id_users',$_SESSION['Auth']['id_users'],PDO::PARAM_STR);
+		
+	
+
+		$req->execute();
+	}
+}
+//Cette fonction va nous servir à rediriger la page avec un exit
+if(!function_exists('redirect')){
+
+	function redirect($page){
+
+		header('location:'.$page);
+		exit();
+
+	}
+}
+
+
+//On va trouver le code par son id 
+
+if(!function_exists('find_code_by_id')){
+
+	function find_code_by_id($id){
+
+		global $bdd;
+			$req = $bdd->prepare("SELECT code FROM codes WHERE id_code = ?");
+			$req->execute([$id]);
+
+		
+
+			$data = $req->fetch(PDO::FETCH_OBJ);
+
+			$req->closeCursor();
+
+			return $data;
+	}
+}

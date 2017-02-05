@@ -2,9 +2,9 @@
 
 	@if(lightness($color) > 50 ){
 
-		@return #ffffff;
+		@return #000000;
 	} @else{
 
-		@return #000000;
+		@return #ffffff;
 	}
 }

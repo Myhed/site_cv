@@ -9,7 +9,7 @@
     <title>Starter Template for Bootstrap</title>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
-
+    <link rel="stylesheet" href="<?= WEBROOT ?>assets/js/google-code-prettify/src/prettify.css">
  
         
       

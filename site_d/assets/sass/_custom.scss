@@ -166,6 +166,23 @@ body {
 	}
 }
 
+.panel.panel-default{
+	margin-top:30px;
+	.panel-heading{
+
+		color:set_text_color($background-panel);
+	}
+
+	.panel-body{
+		color:set_text_color($background-panel);
+
+		.btn.btn-primary{
+
+			background:$mainColor!important;
+		}
+	}
+}
+
 .section-c{
 
 	background:#FADFC2;

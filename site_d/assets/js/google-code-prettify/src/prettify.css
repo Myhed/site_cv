@@ -1,0 +1,137 @@
+/*! Color themes for Google Code Prettify | MIT License | github.com/jmblog/color-themes-for-google-code-prettify */
+.prettyprint {
+  color:#EBD1B7;background-color:#36312C;
+  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
+  border: 0 !important;
+}
+
+.pln {
+  color: #ffffff;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #7285b7;
+}
+
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  padding-left: 1em;
+color:#EBD1B7;
+background-color:#36312C;
+  list-style-type: decimal;
+}
+
+@media screen {
+
+  /* string content */
+  .pln{color:#ebd1b7}
+  .str {
+    color:#f8bb39
+  }
+
+  /* keyword */
+
+  .kwd {
+    color:#95cc5e
+  }
+
+  /* comment */
+
+  .com {
+    color:#7a7267
+  }
+
+  /* type name */
+
+  .typ {
+    color:#db784d
+  }
+
+  /* literal value */
+
+  .lit {
+   color:#60a365
+  }
+
+  /* punctuation */
+
+  .pun {
+    color:#ebd1b7
+  }
+
+  /* lisp open bracket */
+
+  .opn {
+    color:#ebd1b7
+  }
+
+  /* lisp close bracket */
+
+  .clo {
+    color:#ebd1b7
+  }
+
+  /* markup tag name */
+
+  .tag {
+   color:#95cc5e
+  }
+
+  /* markup attribute name */
+
+  .atn {
+    color: #ffc58f;
+  }
+
+  /* markup attribute value */
+
+  .atv {
+   color:#db784d
+  }
+
+  /* declaration */
+
+  .dec {
+   color:#f8bb39
+  }
+
+  /* variable name */
+
+  .var {
+   color:#f8bb39
+  }
+
+  /* function name */
+
+  .fun {
+    color:#95cc5e
+  }
+}
+
+
+
+
+code.earthsong{}
+code.earthsong 
+code.earthsong .str{}
+code.earthsong .kwd{}code.earthsong .com{}
+code.earthsong .typ{}code.earthsong .lit{}
+code.earthsong .pun{}code.earthsong .opn{}
+code.earthsong .clo{}code.earthsong .tag{}
+code.earthsong .atn{}code.earthsong .atv{}
+code.earthsong .dec{}code.earthsong .var{}
+code.earthsong .fun{}pre{padding-top:15px;padding-bottom:15px}
+pre.peacocksInSpace{color:#dee3ec;background-color:#2b303b}
+pre.icebergContrast{color:#BDD6DB;background-color:#0b0e0e}
+pre.earthsong{}
