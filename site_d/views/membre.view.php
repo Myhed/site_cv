@@ -3,9 +3,21 @@
 	<div class="row">
 		<div class="panel panel-default col-md-6">
 			<div class="panel-heading">
-				<h4>Profil de <?= $_SESSION['Auth']['pseudo']; ?></h4>
+				<h4>Profil de <?= isset($_GET['id']) ?  $data_get['pseudo'] : $_SESSION['Auth']['pseudo']; ?></h4>
+			</div>
+
+			<div class="panel panel-body">
+				<?php if($_GET['id'] != $_SESSION['Auth']['id_users']):?>
+							<?php if(Friend() < 1): ?>
+						<a href="?id=<?=$_GET['id']?>&&action=ajouter_amis" class="btn btn-default">Ajouter en amis</a>
+					<?php else: ?>
+						<p class="alert alert-info">Vous avez demandez <?=$data_get['pseudo']?> en amis</p>
+					<?php endif;?>
+			<?php endif;?>
+
 			</div>
 		</div>
+		<?php if(isset($_GET['id']) && $_GET['id'] == $_SESSION['Auth']['id_users']):?>
 		<div class="col-md-6">
 			<div class="panel panel-default">
 				<div class="panel-heading"><h4>Compléter mon profil</h4></div>
@@ -53,6 +65,7 @@
 				</div>
 			</div>
 		</div>
+	<?php endif; ?>
 	</div>
 </div>
 <?php require_once'../inc/bas.inc.php'; ?>

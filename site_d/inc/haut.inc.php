@@ -54,7 +54,7 @@
                       <li class="<?= is_active('membre'); ?>"><a href="<?= WEBROOT ?>admin/membre.php">Mon profil</a></li>
                       <li class='<?= is_active('share_code'); ?>'><a href="<?= WEBROOT ?>admin/share_code.php">Partager</a></li>
                       <?php if($_SESSION['Auth']['grade'] == 'super-admin'):?>
-                        <li class='<?= is_active('super_admin'); ?>'><a href="<?= WEBROOT ?>admin/super_admin.php">Gérez votre site</a></li>
+                        <li class='<?= is_active('super_admin'); ?>'><a href="<?= WEBROOT ?>admin/super_admin.php">Gérez</a></li>
                         
                     <?php endif;?>
                       <li><a href="<?= WEBROOT ?>admin/deconnexion.php" class="login"> | <span class="fa fa-sign-in"></span> Deconnexion</a></li>

@@ -248,7 +248,7 @@ if(!function_exists('get_in_table')){
 	function get_in_table($table){
 
 		global $bdd;
-		$query = $bdd->query("SELECT * FROM $table");
+		$query = $bdd->query("SELECT * FROM $table WHERE id_users = ".$_SESSION['Auth']['id_users']);
 
 		$infos_users = $query->fetch(PDO::FETCH_ASSOC);
 
@@ -314,15 +314,31 @@ if(!function_exists('find_code_by_id')){
 	function find_code_by_id($id){
 
 		global $bdd;
-			$req = $bdd->prepare("SELECT code FROM codes WHERE id_code = ?");
+			$req = $bdd->prepare("SELECT code , id_users FROM codes WHERE id_code = ?");
 			$req->execute([$id]);
-
-		
 
 			$data = $req->fetch(PDO::FETCH_OBJ);
 
 			$req->closeCursor();
 
 			return $data;
+	}
+}
+
+//Cette fonction va nous servire à dire à la personne qui veut ajouter en amis qu'elle doit attendre que la personne accepte
+if(!function_exists('Friend')){
+
+	function Friend(){
+
+		global $bdd;
+
+		$query = $bdd->prepare("SELECT id_destinataire , choix FROM amis WHERE id_expediteur = :id_exp AND id_destinataire = :id_dest");
+		$query->bindParam(':id_exp',$_SESSION['Auth']['id_users'],PDO::PARAM_INT);
+		$query->bindParam(':id_dest',$_GET['id'],PDO::PARAM_INT);
+		$query->execute();
+		$row = $query->rowCount();
+
+		
+		return $row; 
 	}
 }
