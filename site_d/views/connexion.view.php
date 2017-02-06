@@ -17,7 +17,7 @@
 	<div class="well col-md-8 col-md-offset-2">
 	<?php require_once"inc/errors.inc.php"; ?>
 		<h2>Connexion</h2>
-		<form action="" method="POST">
+		<form action="" method="POST" autocomplete="off">
 			<div class="form-group">
 				<input type="text" name="email" placeholder="Veuillez saisir votre email" class="form-control">
 			</div>

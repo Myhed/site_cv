@@ -43,8 +43,48 @@ html{
 		.nav.navbar-nav.navbar-right{
 			
 			li{
-				display: inline-block;
+				display: block;
 			}
+
+			.dropdown{
+
+				li > a{
+
+				color:black!important;
+
+				}
+
+				a.dropdown-toggle{
+
+					position: relative;
+					z-index: 6;
+					
+				}
+
+				.notification{
+
+					position: absolute;
+					top:0;
+					right:0;
+					font-size:10px;
+					border-radius: 50%;
+					color:white;
+					background-color: green;
+					width:20px;
+					text-align: center;
+					
+				}
+
+				.dropdown-menu{
+					width: auto;
+					li{
+
+
+					}
+				}
+			
+			}
+
 		}
 
 }
@@ -253,8 +293,12 @@ footer{
 
 		a.navbar-brand{
 
-		font-size: 	22px;
+		font-size: 	18px;
 	
+	}
+
+	li{
+		display: block!important;
 	}
 
   }

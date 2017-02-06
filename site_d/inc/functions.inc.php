@@ -266,7 +266,7 @@ if(!function_exists('insert_or_update')){
 
 		global $bdd;
 
-		$query = $bdd->query("SELECT * FROM $table");
+		$query = $bdd->query("SELECT * FROM $table WHERE id_users = ".$_SESSION['Auth']['id_users']);
 
 		$row = $query->rowCount();
 
@@ -340,5 +340,90 @@ if(!function_exists('Friend')){
 
 		
 		return $row; 
+	}
+}
+
+
+//Cette fonction va nous servir à dire à l'utilisateur si il a reçus une demande d'amis
+if(!function_exists('notification_demande_ajout')){
+
+		function notification_demande_ajout(){
+
+			global $bdd;
+
+			$req = $bdd -> prepare("SELECT * FROM amis WHERE choix = :EnAttente AND id_destinataire = :id_dest");
+			$choix = 'En-attente';
+			$req->bindParam(':EnAttente',$choix,PDO::PARAM_STR);
+			$req->bindParam(':id_dest',$_SESSION['Auth']['id_users'],PDO::PARAM_STR);
+			$req->execute();
+
+			$row = $req->rowCount();
+			
+			return $row;
+
+		}
+
+}
+
+if(!function_exists('recup_info_demande')){
+	 function recup_info_demande(){
+
+
+	global $bdd;
+	$id_expediteurs = array();
+	$req = $bdd->prepare("SELECT id_expediteur FROM  amis WHERE choix = :EnAttente AND id_destinataire = :id_dest");
+	$choix = 'En-attente';
+			$req->bindParam(':EnAttente',$choix,PDO::PARAM_STR);
+			$req->bindParam(':id_dest',$_SESSION['Auth']['id_users'],PDO::PARAM_STR);
+			
+			$req->execute();
+			return $data = $req->fetchAll();
+	}
+
+}
+
+//Cette fonction va nous servir à dire quand l'utilsateur sera connecter qu'il a reçus des demande d'amis
+
+if(!function_exists('notif_connecter_demande_amis')){
+
+	function notif_connecter_demande_amis(){
+
+		if(notification_demande_ajout() > 0){
+
+			 $_SESSION['Auth']['amis_demande'] = 'Vous avez reçus '. notification_demande_ajout()." demande d'ami(s)";
+
+		}else{
+			unset($_SESSION['Auth']['amis_demande']);
+
+		}
+	}
+}
+
+//Cette fonction va servir à accepter une invitation d'un utilisateur pour la demande d'amis
+
+if(!function_exists('Accepte')){
+
+	function Accepte(){
+
+		global $bdd;
+
+		$query = $bdd->prepare("UPDATE amis SET choix = 'Accepter' WHERE id_expediteur = :id_expediteur");
+
+		$query->bindParam(':id_expediteur',$_GET['id_demande'],PDO::PARAM_INT);
+
+		$query->execute();
+
+		//Récupération du nom de la personne l'id du GET dans l'url
+
+		$req = $bdd->prepare("SELECT pseudo FROM users WHERE id_users = :id_users");
+
+		$req->bindParam(':id_users',$_GET['id_demande'],PDO::PARAM_STR);
+
+		$req->execute();
+
+		$demande_amis = $req->fetch(PDO::FETCH_ASSOC);
+		
+
+		 
 	}
 }

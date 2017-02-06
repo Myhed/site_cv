@@ -1,9 +1,20 @@
 <?php require_once'../inc/haut.inc.php'; ?>
 <div class="container">
+	<?php notif_connecter_demande_amis(); 
+
+			if(isset($_SESSION['Auth']['amis_demande'])):
+	?>
+		<p class="alert alert-warning"><?= $_SESSION['Auth']['amis_demande'] ?></p>
+		
+		
+	<?php endif; ?>
+	
 	<div class="row">
 		<div class="panel panel-default col-md-6">
 			<div class="panel-heading">
+
 				<h4>Profil de <?= isset($_GET['id']) ?  $data_get['pseudo'] : $_SESSION['Auth']['pseudo']; ?></h4>
+
 			</div>
 
 			<div class="panel panel-body">

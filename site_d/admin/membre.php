@@ -32,11 +32,17 @@ if(isset($_GET['id']) && (ctype_digit($_GET['id']) || !isset($_GET['id']))){
 
 
 	}
-		
+	
 	
 }else{
 
 	header('location:membre.php?id='.$_SESSION['Auth']['id_users']);
+}
+
+if(isset($_GET['action']) && $_GET['action'] == 'Ajouter'){
+
+	Accepte();
+	
 }
 
 if($_POST){
@@ -44,11 +50,10 @@ if($_POST){
 		extract($_POST);
 
 		insert_or_update('infos_users');
-		
 
 		$_SESSION['Auth']['infos_users'] = get_in_table('infos_users'); 
 		
-	 
+	 	header('location:membre.php');
 
 
 }
