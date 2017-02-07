@@ -1,5 +1,15 @@
 <?php require_once'../inc/haut.inc.php'; ?>
 <div class="container">
+		<form action="" method="POST">
+				<div class="row">	
+						<div class="col-md-8 col-md-offset-2">
+					
+								<input type="text" style="margin:30px 0" class="form-control" id="search">
+						</div>
+
+				</div>	
+			
+		</form>
 	<?php notif_connecter_demande_amis(); 
 
 			if(isset($_SESSION['Auth']['amis_demande'])):
@@ -21,8 +31,13 @@
 				<?php if($_GET['id'] != $_SESSION['Auth']['id_users']):?>
 							<?php if(Friend() < 1): ?>
 						<a href="?id=<?=$_GET['id']?>&&action=ajouter_amis" class="btn btn-default">Ajouter en amis</a>
-					<?php else: ?>
-						<p class="alert alert-info">Vous avez demandez <?=$data_get['pseudo']?> en amis</p>
+					<?php elseif(friend_now()): ?>
+							<p>	Vous êtes désormais amis avec <strong><?=$data_get['pseudo']?></strong></p>
+						<?php else: ?>
+						
+						<p class="alert alert-info">Vous avez demandez  <?=$data_get['pseudo']?> en amis</p>
+							
+					
 					<?php endif;?>
 			<?php endif;?>
 
@@ -80,3 +95,4 @@
 	</div>
 </div>
 <?php require_once'../inc/bas.inc.php'; ?>
+<script src="../assets/js/search.js"></script>

@@ -427,3 +427,23 @@ if(!function_exists('Accepte')){
 		 
 	}
 }
+
+//Function qui va compter si il est amis ou non avec la personne
+if(!function_exists('friend_now')){
+
+	function friend_now(){
+
+		global $bdd;
+
+		$query = $bdd->prepare("SELECT choix FROM amis WHERE id_expediteur = :id_exp AND id_destinataire = :id_dest AND choix = 'Accepter'");
+
+		$query->bindParam(':id_exp',$_SESSION['Auth']['id_users'],PDO::PARAM_INT);
+		$query->bindParam(':id_dest',$_GET['id'],PDO::PARAM_INT);
+
+		$query->execute();
+
+		$choix = $query->rowCount();
+
+		return $choix;
+	}
+}

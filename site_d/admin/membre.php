@@ -43,6 +43,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'Ajouter'){
 
 	Accepte();
 	
+	header('location:membre.php');
 }
 
 if($_POST){
