@@ -8205,6 +8205,13 @@ html body {
   .navbar.navbar-default .nav.navbar-nav.navbar-right .dropdown .dropdown-menu {
     width: auto; }
 
+.search #result {
+  background-color: #ccc;
+  position: relative;
+  bottom: 33px;
+  overflow: hidden;
+  display: none; }
+
 .navbar-default .navbar-nav .active > a {
   border-radius: 23px;
   opacity: 1;

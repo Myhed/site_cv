@@ -1,22 +1,45 @@
 $(function(){
 
-		$('#search').keyup(function(){
+	$('#search').keyup(function(){
 
-					/*console.log($('#search').val().length);*/
+		var searchlength = $(this).val().length
 
-					if($('#search').val().length > 2 ){
-							var motclef = $("#search").val()
-							var data = array("motclef" => motclef);
-						$.ajax({
+		if(searchlength >= 2){
+			var search = $(this).val()
+			var data = $.trim('search='+search);
+			if($.trim(search)){
 
-							
-						
+			
+			$.ajax({
 
+				type: 'GET',
+				url : 'result.php',
+				data : data,
+				dataType:'html',
+				success: function(html){
+					
 
-						});
-							return false;
-					}
+					$('#result').css({
 
-		});
+						display:'block'
+					});
+					$("#result").append(html).show();
+
+						console.log(html);
+					
+				}
+
+			});
+		}
+
+			}else if(searchlength < 1){
+
+				$('#result').html('').show();
+				$('#result').css({
+
+					display:'none'
+				});
+			}
+	});
 
 });

@@ -2,9 +2,11 @@
 <div class="container">
 		<form action="" method="POST">
 				<div class="row">	
-						<div class="col-md-8 col-md-offset-2">
-					
-								<input type="text" style="margin:30px 0" class="form-control" id="search">
+						<div class=" search col-md-8 col-md-offset-2">
+								<form action="" method="POST" id="form" autocomplete="off">
+									<input type="text" style="margin:30px 0" class="form-control" id="search">
+								</form>
+								<div  id="result"></div>
 						</div>
 
 				</div>	

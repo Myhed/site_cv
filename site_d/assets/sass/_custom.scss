@@ -89,6 +89,19 @@ html{
 
 }
 
+.search{
+
+	#result{
+
+		background-color: #ccc;
+		position:relative;
+		bottom:33px;
+		overflow: hidden;
+		display: none;
+		
+	}
+}
+
 .navbar-default .navbar-nav{
 
 		.active > a {
