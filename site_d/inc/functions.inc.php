@@ -447,3 +447,20 @@ if(!function_exists('friend_now')){
 		return $choix;
 	}
 }
+
+//récuperation des colonne d'une table
+
+if(!function_exists('get_colonne')){
+
+	function get_colonne($table){
+		global $bdd;
+		global $column;
+		global $data;
+		
+
+			$column = $bdd->query("SELECT * FROM $table");
+		 	return  $column->ColumnCount();
+
+		
+	}
+}

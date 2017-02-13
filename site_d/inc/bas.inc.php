@@ -1,5 +1,5 @@
 
-           <footer class="<?= (that_is_it() == 'connexion.php' || that_is_it() == 'membre.php' || that_is_it() == 'super_admin.php') ? 'navbar-bottom':null;?>"> 
+           <footer class="<?= (that_is_it() == 'connexion.php' || that_is_it() == 'membre.php' || that_is_it() == 'super_admin.php') ? 'navbar-fixed-bottom':null;?>"> 
                 <div class="container"> 
                   <p class="copyright">Copyright &copy; 2017 Myhed theme</p>
                 </div>

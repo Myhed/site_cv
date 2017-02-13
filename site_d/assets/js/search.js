@@ -1,6 +1,10 @@
 $(function(){
+	$('#search').on('input',function(e){
 
-	$('#search').keyup(function(){
+		e.preventDefault();
+
+	})
+	$('#search').keyup(function(e){
 
 		var searchlength = $(this).val().length
 
