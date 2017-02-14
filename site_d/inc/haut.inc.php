@@ -29,7 +29,7 @@
     <![endif]-->
   </head>
 
-  <body style="margin-bottom:75px;">
+  <body>
 
     <nav class="navbar navbar-default">
      <a class="navbar-brand" href="#"><p>Write more.</p>learn less</p></a>

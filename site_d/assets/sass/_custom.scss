@@ -182,14 +182,14 @@ body {
 
 .progress {
   height: 35px;
-
+	margin-top: 30px;
   .skill{
 
   font: normal 12px "Open Sans Web";
   line-height: 35px;
   padding: 0;
   margin: 0 0 0 20px;
-  text-transform: uppercase
+  text-transform: uppercase;
 
   	
   }
@@ -203,7 +203,8 @@ body {
 
 		.progress-bar{
 	 text-align: left;
-  transition-duration: 3s;
+  	transition-duration: 3s;
+	
 	}
 
 }

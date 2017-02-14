@@ -36,28 +36,45 @@
 								
 									$name = $column->getColumnMeta($i);
 							?>
-							<th class="text-center">
+							
 							<?php 
 							if($name['name'] != 'id_'.$table_name){
 
-										echo $name['name'];
+										echo '<th class="text-center">'.$name['name'].'</th>';
 										
 									} 
 									?>
 										
-								</th>
+								
 								
 							<?php endfor; ?>
-							<th class="text-center">Modifier</th>
-							<th class="text-center">supprimer</th>
+							<th class="text-center">Modifier/supprimer</th>
+							
 							</thead>
 							
 							<?php if($_GET['affichage'] === 'show_competence'): ?>
+											<?php 
+										foreach($datas as $data):
+
+											
+											
+											var_dump($data);
+												
+										
+									?>
+										<tr>
+											<td class="text-center"><?=$data['competence']; ?></td>
+											<td class="text-center"><?=$data['niveau']; ?></td>
+											<div class="btn-group">
+												<td class="text-center"><a href="modificationSupression.php?modification_competence=<?= $data['id_competence'] ?>" class="btn btn-info btn-xs">Modifier</a><a href="modificationSupression.php?supression_competence=<?= $data['id_competence'] ?>" class="btn btn-warning btn-xs">supprimer</a></td>
+											
+											</div>
+										</tr>
+								<?php endforeach; ?>
 									
 							<?php elseif($_GET['affichage'] === 'show_experience'): ?>
 									<?php 
 										foreach($datas as $data):
-
 											
 											
 												

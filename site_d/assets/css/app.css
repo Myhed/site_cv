@@ -8259,7 +8259,8 @@ body {
     color: #FFE497; }
 
 .progress {
-  height: 35px; }
+  height: 35px;
+  margin-top: 30px; }
   .progress .skill {
     font: normal 12px "Open Sans Web";
     line-height: 35px;
