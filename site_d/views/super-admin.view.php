@@ -22,7 +22,7 @@
 										</div>
 									</div>
 								</div>
-								<input type="submit" name="comp" class="btn btn-default">
+								<input type="submit" name="comp" class="btn btn-default"><a href="super_admin_data.php?affichage=show_competence" class="btn btn-info">Voir competence</a>
 							</form>
 						</div>
 					</div>
@@ -40,7 +40,7 @@
 									<div class="row">
 										<div class="col-md-6">
 										<label for="">formation</label>
-											<input type="text" name="formation" class="form-control">
+											<input type="text" name="formation" class="form-control" class="btn btn-info">
 										</div>
 										<div class="col-md-6">
 											<label for="">date</label>
@@ -48,7 +48,7 @@
 										</div>
 									</div>
 								</div>
-								<input type="submit" name="forma" class="btn btn-default">
+								<input type="submit" name="forma" class="btn btn-default"><a href="super_admin_data.php?affichage=show_formation" class="btn btn-info">Voir formation</a>
 							</form>
 						</div>
 					</div>
@@ -59,7 +59,7 @@
 				<div class="col-md-6">
 					<div class="panel panel-default">
 						<div class="panel panel-heading">
-							<h4>expérience</h4>
+							<h4>expérience professionnel</h4>
 						</div>
 						<div class="panel panel-body">
 							<form action="" method="POST">
@@ -75,7 +75,7 @@
 										</div>
 									</div>
 								</div>
-								<input type="submit" name="exp" class="btn btn-default">
+								<input type="submit" name="exp" class="btn btn-default"><a href="super_admin_data.php?affichage=show_experience" class="btn btn-info">Voir experience</a>
 							</form>
 						</div>
 					</div>

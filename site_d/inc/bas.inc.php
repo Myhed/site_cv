@@ -11,6 +11,7 @@
     
     <script src="<?= WEBROOT ?>assets/bower_components/jquery/dist/jquery.js"></script>
     <script src="<?= WEBROOT ?>assets/js/Utilitaire.js"></script>
+    <script src="<?= WEBROOT ?>assets/js/cv_click.js"></script>
     <script src="<?= WEBROOT ?>assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
   </body>
 </html>

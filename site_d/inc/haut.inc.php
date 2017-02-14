@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta description="Cv de Myhed Ben-Rhouma Développeur/Intégrateur WEB">
     <meta keywords="myhed, ben-Rhouma , myhed ben-Rhouma, developpeur web, ">
-    <title>Starter Template for Bootstrap</title>
+    <title>Myhed Ben-rhouma</title>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="<?= WEBROOT ?>assets/js/google-code-prettify/src/prettify.css">
@@ -112,10 +112,24 @@
             <div class="container">
                   <h1>MYHED BENRHOUMA</h1>
                   <p class="lead">Integrateur/developpeur web</p>
-            </div>
+            <h2 class="cv">Télécharger mon CV</h2>
+            <div class="download-wrap">
+                <div class="download">
+                    <a href="<?=WEBROOT?>CV_myhed_benrhouma_V1.pdf" class="button-download" target="_blank">
+                        download
 
+                        <span class="icon-wrap">
+                          <i class="icon-download"></i>
+                         </span>
+                    </a>
+                <div class="meter">
+                  <span class="meter-progress"></span>
+                </div>
+             </div>
+          </div>
 
         </div>
+            </div>
     </header>
 
   <?php endif; ?>
