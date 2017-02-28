@@ -1,4 +1,6 @@
 <?php require_once"../inc/inc-superAdmin/haut.inc-superAdmin.php";?>
+	
+
  	<?php 
  		if(isset($_GET['affichage']) && ($_GET['affichage'] == 'show_competence' || $_GET['affichage'] == 'show_experience' || $_GET['affichage'] == 'show_formation')):
 
@@ -79,8 +81,10 @@
 				</div>
 
 	<?php else: 
-		
+	/*	header('location:super_admin.php');
+		exit();*/
 	?>
 	
 <?php endif; ?>
- <?php require_once"../inc/inc-superAdmin/bas.inc-superAdmin.php";?>
+<?php require_once"../inc/inc-superAdmin/bas.inc-superAdmin.php";?>
+

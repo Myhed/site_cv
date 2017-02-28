@@ -108,15 +108,20 @@
 
     <?php if(that_is_it() == 'index.php'): ?>
     <header id="main-header">
+          <div class="page-header">
+              <div class="container">
+                 <p id="DivClignotante" class="text-center">Le site est en cours de production et sera finalisé bientôt</p>
+              </div>
+          </div>
         <div class="intro-header">
             <div class="container">
                   <h1>MYHED BENRHOUMA</h1>
-                  <p class="lead">Integrateur/developpeur web</p>
-            <h2 class="cv">Télécharger mon CV</h2>
+                  <p class="lead">Intégrateur/développeur web</p>
+            <h2 class="cv">Téléchargez mon CV</h2>
             <div class="download-wrap">
                 <div class="download">
                     <a href="<?=WEBROOT?>CV_myhed_benrhouma_V1.pdf" class="button-download" target="_blank">
-                        download
+                        Télécharger
 
                         <span class="icon-wrap">
                           <i class="icon-download"></i>

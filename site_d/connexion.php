@@ -16,7 +16,18 @@ if($_POST){
 				//Faire en sorte de le rediriger vers la page admin
 
 				$_SESSION['Auth'] = get_users($email);
-				header('location:admin/membre.php?id='.$_SESSION['Auth']['id_users']);
+
+					if($_SESSION['Auth'] == 'utilisateur'){
+						//Si l'utilisateur à un status simple utilisateur alors on le redirige vers l'espace membre.php
+						header('location:admin/membre.php?id='.$_SESSION['Auth']['id_users']);
+					
+					}else{
+
+						header('location:admin/index.php?id='.$_SESSION['Auth']['id_users']);
+
+					}
+
+
 
 			}else{
 

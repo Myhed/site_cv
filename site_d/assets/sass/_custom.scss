@@ -89,7 +89,25 @@ html{
 
 }
 
+#main-header{
 
+	.page-header{
+
+		background-color:darken($mainColor,10);
+		padding:0;
+		margin:0;
+		border:none;
+		color:set_text_color($mainColor);
+		line-height: 15px;
+
+		p{
+			font-size: 18px;
+			line-height: 15px;
+			margin-top: 15px;
+			
+		}
+	}
+}
 
 .search{
 
@@ -291,6 +309,11 @@ footer{
 }
 
 @media only screen and(max-width: 480px){
+
+		body{
+
+			width: 100%;
+		}
 	#main-header{
 		background: url('../img/header.jpg') no-repeat 0 ;
 		.intro-header{
@@ -301,6 +324,16 @@ footer{
 
 			.lead{
 				font-size: 	15px;
+				
+			}
+
+			.cv{
+				font-size: 15px;
+			}
+
+			.button,[class*='button-']{
+
+				display: none;
 			}
 		}
 	}
@@ -376,7 +409,7 @@ $btnW: 15rem;
 }
 .button,
 [class*='button-']{
-  background: $primary;
+  background: #B29DAC;
   display: inline-block;
   padding: 1rem 2rem;
   color: $gray;
@@ -389,7 +422,7 @@ $btnW: 15rem;
   transition: 0.5s linear all;
   
   &:hover{
-    background: lighten($primary, 20%);
+    background: lighten(#B29DAC, 20%);
   }
 }
 

@@ -1,4 +1,4 @@
-<?php require_once'../inc/haut.inc.php';?>
+<?php require_once'../inc/inc-superAdmin/haut.inc-superAdmin.php';?>
 	<div class="container">
 		<?php require_once"../inc/errors.inc.php";?>
 			<div class="row">
@@ -86,4 +86,4 @@
 	</div>
 	
 
-<?php require_once'../inc/bas.inc.php';?>
+<?php require_once"../inc/inc-superAdmin/haut.inc-superAdmin.php";?>
