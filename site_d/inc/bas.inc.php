@@ -13,6 +13,6 @@
     <script src="<?= WEBROOT ?>assets/js/Utilitaire.js"></script>
     <script src="<?= WEBROOT ?>assets/js/cv_click.js"></script>
     <script src="<?= WEBROOT ?>assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
-    <script src="<?= WEBROOT ?>assets/js/clignotant.js"></script>
+
   </body>
 </html>

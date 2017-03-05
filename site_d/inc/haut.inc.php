@@ -92,7 +92,6 @@
 
                     <?php else: ?>
                       <li class="active"><a href="#">Accueil</a></li>
-                      <li ><a href="#about">A propos</a></li>
                       <li><a href="#contact">Contact</a></li>
                       <li><a href="connexion.php" class="login"> | <span class="fa fa-sign-in"></span> Connexion</a></li>
 
@@ -108,11 +107,11 @@
 
     <?php if(that_is_it() == 'index.php'): ?>
     <header id="main-header">
-          <div class="page-header">
+          <!-- <div class="page-header">
               <div class="container">
                  <p id="DivClignotante" class="text-center">Le site est en cours de production et sera finalisé bientôt</p>
               </div>
-          </div>
+          </div> -->
         <div class="intro-header">
             <div class="container">
                   <h1>MYHED BENRHOUMA</h1>

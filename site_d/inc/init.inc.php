@@ -1,7 +1,7 @@
 <?php
 // Connexions à la base de données
 	try{
-		$bdd = new PDO('mysql:host=localhost;dbname=cv','root','');
+		$bdd = new PDO('mysql:host=localhost;dbname=cv_myhed','root','root');
 		$bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		$bdd->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND,'SET NAMES utf8');
 	}

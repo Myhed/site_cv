@@ -1,7 +1,8 @@
 <?php require_once"../inc/inc-superAdmin/haut.inc-superAdmin.php";?>
 	
+<?php 
 
- 	<?php 
+
  		if(isset($_GET['affichage']) && ($_GET['affichage'] == 'show_competence' || $_GET['affichage'] == 'show_experience' || $_GET['affichage'] == 'show_formation')):
 
  			$title_table = explode('_',$_GET['affichage']);
@@ -31,7 +32,7 @@
 							?>
 							
 							<?php 
-							if($name['name'] != 'id_'.$table_name){
+							if($name['name'] != 'id_'.$table_name && $name['name'] != 'acquisition'){
 										echo '<th class="text-center">'.$name['name'].'</th>';	
 									} 
 									?>
@@ -49,7 +50,7 @@
 											<td class="text-center"><?=$data['competence']; ?></td>
 											<td class="text-center"><?=$data['niveau']; ?></td>
 											<div class="btn-group">
-												<td class="text-center"><a href="modificationSupression.php?modification_competence=<?= $data['id_competence'] ?>" class="btn btn-info btn-xs">Modifier</a><a href="modificationSupression.php?supression_competence=<?= $data['id_competence'] ?>" class="btn btn-warning btn-xs">supprimer</a></td>
+												<td class="text-center"><a href="?affichage=show_competence&&modification_competence=<?= $data['id_competence'] ?>" class="btn btn-info btn-xs">Modifier</a><a href="?supression_competence=<?= $data['id_competence'] ?>" class="btn btn-warning btn-xs">supprimer</a></td>
 											
 											</div>
 										</tr>
@@ -62,7 +63,7 @@
 										<tr>
 											<td><?=$data['experience']; ?></td>
 											<td><?=$data['date_exp']; ?></td>
-											<td class="text-center"><a href="modificationSupression.php?modification_competence=<?= $data['id_experience'] ?>" class="btn btn-info btn-xs">Modifier</a><a href="modificationSupression.php?supression_competence=<?= $data['id_experience'] ?>" class="btn btn-warning btn-xs">supprimer</a></td>
+											<td class="text-center"><a href="?affichage=show_experience&&modification_experience=<?= $data['id_experience'] ?>" class="btn btn-info btn-xs">Modifier</a><a href="?supression_competence=<?= $data['id_experience'] ?>" class="btn btn-warning btn-xs">supprimer</a></td>
 										</tr>
 								<?php endforeach; ?>
 							<?php elseif($_GET['affichage'] === 'show_formation'): ?>
@@ -70,7 +71,7 @@
 												<tr>
 											<td><?=$data['formation']; ?></td>
 											<td><?=$data['date_forma']; ?></td>
-											<td class="text-center"><a href="modificationSupression.php?modification_competence=<?= $data['id_formation'] ?>" class="btn btn-info btn-xs">Modifier</a><a href="modificationSupression.php?supression_competence=<?= $data['id_formation'] ?>" class="btn btn-warning btn-xs">supprimer</a></td>
+											<td class="text-center"><a href="?affichage=show_formation&&modification_formation=<?= $data['id_formation'] ?>" class="btn btn-info btn-xs">Modifier</a><a href="?supression_formation=<?= $data['id_formation'] ?>" class="btn btn-warning btn-xs">supprimer</a></td>
 										</tr>
 								<?php endforeach; ?>
 							
@@ -86,5 +87,8 @@
 	?>
 	
 <?php endif; ?>
+ 	
 <?php require_once"../inc/inc-superAdmin/bas.inc-superAdmin.php";?>
 
+
+ 	

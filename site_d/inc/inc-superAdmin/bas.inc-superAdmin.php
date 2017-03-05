@@ -10,6 +10,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?=WEBROOT ?>assets/js/js_admin/metisMenu.min.js"></script>
+    <script src="<?=WEBROOT ?>assets/js/js_admin/sb-admin-2.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
     
